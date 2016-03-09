@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Pokemon Tools</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <style>
+        .main.container {
+            margin-top: 2em;
+        }
+
+        .main.menu {
+            margin-top: 4em;
+            border-radius: 0;
+            border: none;
+            box-shadow: none;
+            transition: box-shadow 0.5s ease, padding 0.5s ease;
+        }
+
+            .main.menu .item img.logo {
+                margin-right: 1.5em;
+            }
+
+        .overlay {
+            float: left;
+            margin: 0em 3em 1em 0em;
+        }
+
+            .overlay .menu {
+                position: relative;
+                left: 0;
+                transition: left 0.5s ease;
+            }
+
+        .main.menu.fixed {
+            background-color: #FFFFFF;
+            border: 1px solid #DDD;
+            box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .overlay.fixed .menu {
+            left: 800px;
+        }
+
+
+        .ui.footer.segment {
+            margin: 5em 0em 0em;
+            padding: 5em 0em;
+        }
+    </style>
+</head>
+<body>
+    <div class="ui main container">
+        <h2 class="ui center aligned icon header">
+            <i class="gamepad icon"></i>
+            <div class="content">
+                Pokemon Tools
+                <div class="sub header">Calculate how many EP your Pokémon gets and how high the damage could be.</div>
+            </div>
+        </h2>
+    </div>
+    <div class="ui borderless main menu">
+        <div class="ui container">
+            <a class="header item" href="/">
+                Pokemon Toolbox
+            </a>
+            <a class="item" href="#">Blog</a>
+            <a class="item" href="#">Articles</a>
+            <a class="right item" href="/account/login">Login</a>
+        </div>
+    </div>
+    <div class="ui container">
+        @RenderBody()
+    </div>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/semantic")
+    @RenderSection("scripts", required: false)
+    <script>
+        $(function () {
+            // fix main menu to page on passing
+            $('.main.menu').visibility({
+                type: 'fixed'
+            });
+
+            // show dropdown on hover
+            $('.main.menu  .ui.dropdown').dropdown({
+                on: 'hover'
+            });
+        });
+    </script>
+</body>
+</html>
