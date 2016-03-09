@@ -60,8 +60,8 @@ namespace Coding.Lizards.Pokemon.Tools.Web.Controllers {
                 return View(model);
             }
 
-            var user = new ApplicationUser { Email = model.Email, PasswordHash = model.Password, UserName = model.Email };
-            var result = await UserManager.CreateAsync(user);
+            var user = new ApplicationUser { Email = model.Email, UserName = model.Email };
+            var result = await UserManager.CreateAsync(user, model.Password);
             if (result.Succeeded) {
                 await SignInManager.SignInAsync(user, isPersistent: true, rememberBrowser: false);
 

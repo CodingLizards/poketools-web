@@ -55,9 +55,7 @@ namespace Coding.Lizards.Pokemon.Tools.Web
             {
                 RequiredLength = 6,
                 RequireNonLetterOrDigit = true,
-                RequireDigit = true,
-                RequireLowercase = true,
-                RequireUppercase = true,
+                RequireDigit = true
             };
 
             // Standardeinstellungen für Benutzersperren konfigurieren
