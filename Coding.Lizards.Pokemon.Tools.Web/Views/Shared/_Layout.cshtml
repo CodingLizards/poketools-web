@@ -18,6 +18,7 @@
             border: none;
             box-shadow: none;
             transition: box-shadow 0.5s ease, padding 0.5s ease;
+            background-color: #eeeeee;
         }
 
             .main.menu .item img.logo {
@@ -50,18 +51,13 @@
             margin: 5em 0em 0em;
             padding: 5em 0em;
         }
+
+        body {
+            background: url(http://www.pokewiki.de/images/e/e4/ORAS_Hoenn_Map.jpg) no-repeat center 8px fixed #336699;
+        }
     </style>
 </head>
 <body>
-    <div class="ui main container">
-        <h2 class="ui center aligned icon header">
-            <i class="gamepad icon"></i>
-            <div class="content">
-                Pokemon Tools
-                <div class="sub header">Calculate how many EP your Pokémon gets and how high the damage could be.</div>
-            </div>
-        </h2>
-    </div>
     <div class="ui borderless main menu">
         <div class="ui container">
             <a class="header item" href="/">
@@ -69,11 +65,18 @@
             </a>
             <a class="item" href="#">Blog</a>
             <a class="item" href="#">Articles</a>
-            <a class="right item" href="/account/login">Login</a>
+            @Html.Partial("_LoginPartial")
         </div>
     </div>
     <div class="ui container">
         @RenderBody()
+    </div>
+    <div class="ui bottom fixed borderless menu" style="background-color: #eeeeee">
+        <div class="ui container">
+            <div class="item">
+                &copy; Coding Lizards GbR &mdash; Backgroundpicture &copy; Pokémon &sdot; Nintendo &sdot; Creatures &sdot; GAME FREAK
+            </div>
+        </div>
     </div>
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/semantic")
