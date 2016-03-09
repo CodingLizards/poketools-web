@@ -2,36 +2,17 @@
 @{
     ViewBag.Title = "Registrieren";
 }
-
-<style>
-    .column {
-        max-width: 450px;
-    }
-
-    body {
-        background-color: #dadada;
-    }
-
-    .main.menu {
-        background-color: #dadada;
-    }
-</style>
 <div class="ui middle aligned center aligned grid">
-    <div class="column">
-        <h2 class="ui primary header">
-            <div class="content">
-                @ViewBag.Title.
-            </div>
-        </h2>
+    <div class="ui ten wide left aligned column stacked segment">
+        <h2>@ViewBag.Title.</h2>
         @using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "ui large form", role = "form" })) {
             @Html.AntiForgeryToken()
-            <div class="ui stacked segment">
-                <div class="field">
-                    <div class="ui left icon input">
-                        <i class="user icon"></i>
-                        @Html.TextBoxFor(m => m.Email, new { placeholder = Html.DisplayNameFor(c => c.Email) })
-                    </div>
+            <div class="field">
+                <div class="ui left icon input">
+                    <i class="user icon"></i>
+                    @Html.TextBoxFor(m => m.Email, new { placeholder = Html.DisplayNameFor(c => c.Email) })
                 </div>
+            </div>
                 <div class="field">
                     <div class="ui left icon input">
                         <i class="lock icon"></i>
@@ -45,7 +26,6 @@
                     </div>
                 </div>
                 <button class="ui fluid large primary submit button" type="submit">Register</button>
-            </div>
         }
     </div>
 </div>

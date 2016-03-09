@@ -3,21 +3,11 @@
 @{
     ViewBag.Title = "Anmelden";
 }
-<style>
-    .column {
-        max-width: 450px;
-    }
-</style>
 <div class="ui middle aligned center aligned grid">
-    <div class="column">
-        <h2 class="ui primary header">
-            <div class="content">
-                @ViewBag.Title.
-            </div>
-        </h2>
+    <div class="ui ten wide left aligned column stacked segment">
+        <h2>@ViewBag.Title.</h2>
         @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "ui large form", role = "form" })) {
             @Html.AntiForgeryToken()
-            <div class="ui stacked segment">
                 <div class="field">
                     <div class="ui left icon input">
                         <i class="user icon"></i>
