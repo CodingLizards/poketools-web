@@ -1,7 +1,7 @@
 ﻿@using Coding.Lizards.Pokemon.Tools.Web.Models
 @model LoginViewModel
 @{
-    ViewBag.Title = "Anmelden";
+    ViewBag.Title = Texts.Account_Login_Title;
 }
 <div class="ui middle aligned center aligned grid">
     <div class="ui ten wide left aligned column stacked segment">
@@ -20,7 +20,7 @@
                     @Html.PasswordFor(m => m.Password, new { placeholder = Html.DisplayNameFor(c => c.Password) })
                 </div>
             </div>
-            <button class="ui fluid large primary submit button" type="submit">Login</button>
+            <button class="ui fluid large primary submit button" type="submit">@Texts.Account_Login_Submit</button>
         }
     </div>
 </div>

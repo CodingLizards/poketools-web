@@ -1,39 +1,36 @@
 ﻿namespace Coding.Lizards.Pokemon.Tools.Web.Models {
 
+    using Strings;
     using System.ComponentModel.DataAnnotations;
 
     public class LoginViewModel {
 
         [Required]
-        [Display(Name = "E-Mail")]
         [EmailAddress]
+        [Display(Name = "Account_Login_Email", ResourceType = typeof(Texts))]
         public string Email { get; set; }
 
         [Required]
         [DataType(DataType.Password)]
-        [Display(Name = "Kennwort")]
+        [Display(Name = "Account_Login_Password", ResourceType = typeof(Texts))]
         public string Password { get; set; }
-
-        [Display(Name = "Speichern?")]
-        public bool RememberMe { get; set; }
     }
 
     public class RegisterViewModel {
 
         [Required]
         [EmailAddress]
-        [Display(Name = "E-Mail")]
+        [Display(Name = "Account_Register_Email", ResourceType = typeof(Texts))]
         public string Email { get; set; }
 
         [Required]
-        [StringLength(100, ErrorMessage = "\"{0}\" muss mindestens {2} Zeichen lang sein.", MinimumLength = 6)]
         [DataType(DataType.Password)]
-        [Display(Name = "Kennwort")]
+        [Display(Name = "Account_Register_Password", ResourceType = typeof(Texts))]
         public string Password { get; set; }
 
         [DataType(DataType.Password)]
-        [Display(Name = "Kennwort bestätigen")]
-        [Compare("Password", ErrorMessage = "Das Kennwort entspricht nicht dem Bestätigungskennwort.")]
+        [Display(Name = "Account_Register_ConfirmPassword", ResourceType = typeof(Texts))]
+        [Compare("Password", ErrorMessageResourceName = "Account_Register_ConfirmPassword_Compare", ErrorMessageResourceType = typeof(Texts))]
         public string ConfirmPassword { get; set; }
     }
 }

@@ -4,14 +4,10 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - Pokemon Tools</title>
+    <title>@ViewBag.Title - @Texts._Layout_Title</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
     <style>
-        .main.container {
-            margin-top: 2em;
-        }
-
         .main.menu {
             margin-top: 4em;
             border-radius: 0;
@@ -53,7 +49,7 @@
         }
 
         body {
-            background: url(http://www.pokewiki.de/images/e/e4/ORAS_Hoenn_Map.jpg) no-repeat center 8px fixed #336699;
+            background: url(http://www.pokewiki.de/images/e/e4/ORAS_Hoenn_Map.jpg) no-repeat center 8px fixed;
         }
     </style>
 </head>
@@ -61,10 +57,13 @@
     <div class="ui borderless main menu">
         <div class="ui container">
             <a class="header item" href="/">
-                Pokemon Toolbox
+                @Texts._Layout_Title
             </a>
-            <a class="item" href="#">Blog</a>
-            <a class="item" href="#">Articles</a>
+            <a class="item" href="/pokemon/">@Texts._Layout_Pokemon</a>
+            <a class="item" href="/pokemon/attacks">@Texts._Layout_Attacks</a>
+            @if (User.Identity.IsAuthenticated) {
+                <a href="/admin/usermanager" class="item">@Texts._Layout_Usermanager</a>
+            }
             @Html.Partial("_LoginPartial")
         </div>
     </div>
@@ -74,7 +73,7 @@
     <div class="ui bottom fixed borderless menu" style="background-color: #eeeeee">
         <div class="ui container">
             <div class="item">
-                &copy; Coding Lizards GbR &mdash; Backgroundpicture &copy; Pokémon &sdot; Nintendo &sdot; Creatures &sdot; GAME FREAK
+                @Html.Raw(Texts._Layout_Footer_Copyright)
             </div>
         </div>
     </div>
@@ -87,12 +86,8 @@
             $('.main.menu').visibility({
                 type: 'fixed'
             });
-
-            // show dropdown on hover
-            $('.main.menu  .ui.dropdown').dropdown({
-                on: 'hover'
-            });
         });
     </script>
 </body>
+
 </html>

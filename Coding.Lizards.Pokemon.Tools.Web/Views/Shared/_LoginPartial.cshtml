@@ -2,9 +2,9 @@
 @if (Request.IsAuthenticated) {
     using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "right menu" })) {
         @Html.AntiForgeryToken()
-        @Html.ActionLink("Hallo " + User.Identity.GetUserName() + "!", "ChangePassword", "Manage", null, new { title = "Change password", @class = "item" })
-        <a class="item" href="javascript:document.getElementById('logoutForm').submit()">Abmelden</a>
+        @Html.ActionLink(string.Format(Texts._LoginPartial_Greeting, User.Identity.GetUserName()), "ChangePassword", "Manage", null, new { title = Texts._LoginPartial_ChangePassword, @class = "item" })
+        <a class="item" href="javascript:document.getElementById('logoutForm').submit()">@Texts._LoginPartial_Logoff</a>
     }
 } else {
-    @Html.ActionLink("Anmelden", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink", @class = "right item" })
+    @Html.ActionLink(Texts._LoginPartial_Login, "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink", @class = "right item" })
 }

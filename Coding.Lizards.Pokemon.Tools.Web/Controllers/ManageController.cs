@@ -41,7 +41,7 @@ namespace Coding.Lizards.Pokemon.Tools.Web.Controllers {
 
         //
         // GET: /Manage/Index
-        public async Task<ActionResult> Index(ManageMessageId? message) {
+        public ActionResult Index(ManageMessageId? message) {
             ViewBag.StatusMessage =
                 message == ManageMessageId.ChangePasswordSuccess ? "Ihr Kennwort wurde geändert."
                 : message == ManageMessageId.Error ? "Fehler"

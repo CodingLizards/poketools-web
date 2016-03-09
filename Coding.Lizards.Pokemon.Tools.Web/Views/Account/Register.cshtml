@@ -1,6 +1,6 @@
 ﻿@model Coding.Lizards.Pokemon.Tools.Web.Models.RegisterViewModel
 @{
-    ViewBag.Title = "Registrieren";
+    ViewBag.Title = Texts.Account_Register_Title;
 }
 <div class="ui middle aligned center aligned grid">
     <div class="ui ten wide left aligned column stacked segment">
@@ -25,7 +25,7 @@
                         @Html.PasswordFor(m => m.ConfirmPassword, new { placeholder = Html.Raw(Html.DisplayNameFor(c => c.ConfirmPassword)) })
                     </div>
                 </div>
-                <button class="ui fluid large primary submit button" type="submit">Register</button>
+                <button class="ui fluid large primary submit button" type="submit">@Texts.Account_Register_Submit</button>
         }
     </div>
 </div>
