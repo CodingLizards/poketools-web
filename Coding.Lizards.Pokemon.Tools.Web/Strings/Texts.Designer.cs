@@ -232,6 +232,168 @@ namespace Coding.Lizards.Pokemon.Tools.Web.Strings {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Käfer ähnelt.
+        /// </summary>
+        public static string Enums_Type_Bug {
+            get {
+                return ResourceManager.GetString("Enums_Type_Bug", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Unlicht ähnelt.
+        /// </summary>
+        public static string Enums_Type_Dark {
+            get {
+                return ResourceManager.GetString("Enums_Type_Dark", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Drache ähnelt.
+        /// </summary>
+        public static string Enums_Type_Dragon {
+            get {
+                return ResourceManager.GetString("Enums_Type_Dragon", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Elektro ähnelt.
+        /// </summary>
+        public static string Enums_Type_Electric {
+            get {
+                return ResourceManager.GetString("Enums_Type_Electric", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Fee ähnelt.
+        /// </summary>
+        public static string Enums_Type_Fairy {
+            get {
+                return ResourceManager.GetString("Enums_Type_Fairy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Kampf ähnelt.
+        /// </summary>
+        public static string Enums_Type_Fighting {
+            get {
+                return ResourceManager.GetString("Enums_Type_Fighting", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Feuer ähnelt.
+        /// </summary>
+        public static string Enums_Type_Fire {
+            get {
+                return ResourceManager.GetString("Enums_Type_Fire", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Flug ähnelt.
+        /// </summary>
+        public static string Enums_Type_Flying {
+            get {
+                return ResourceManager.GetString("Enums_Type_Flying", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Geist ähnelt.
+        /// </summary>
+        public static string Enums_Type_Ghost {
+            get {
+                return ResourceManager.GetString("Enums_Type_Ghost", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Pflanze ähnelt.
+        /// </summary>
+        public static string Enums_Type_Grass {
+            get {
+                return ResourceManager.GetString("Enums_Type_Grass", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Boden ähnelt.
+        /// </summary>
+        public static string Enums_Type_Ground {
+            get {
+                return ResourceManager.GetString("Enums_Type_Ground", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Eis ähnelt.
+        /// </summary>
+        public static string Enums_Type_Ice {
+            get {
+                return ResourceManager.GetString("Enums_Type_Ice", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Normal ähnelt.
+        /// </summary>
+        public static string Enums_Type_Normal {
+            get {
+                return ResourceManager.GetString("Enums_Type_Normal", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Gift ähnelt.
+        /// </summary>
+        public static string Enums_Type_Poison {
+            get {
+                return ResourceManager.GetString("Enums_Type_Poison", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Psycho ähnelt.
+        /// </summary>
+        public static string Enums_Type_Psychic {
+            get {
+                return ResourceManager.GetString("Enums_Type_Psychic", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Gestein ähnelt.
+        /// </summary>
+        public static string Enums_Type_Rock {
+            get {
+                return ResourceManager.GetString("Enums_Type_Rock", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Stahl ähnelt.
+        /// </summary>
+        public static string Enums_Type_Steel {
+            get {
+                return ResourceManager.GetString("Enums_Type_Steel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Wasser ähnelt.
+        /// </summary>
+        public static string Enums_Type_Water {
+            get {
+                return ResourceManager.GetString("Enums_Type_Water", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Oder ähnelt.
         /// </summary>
         public static string Or {

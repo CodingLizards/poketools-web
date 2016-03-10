@@ -194,6 +194,7 @@
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\BaseModels.cs" />
     <Compile Include="Models\BaseViewModels.cs" />
+    <Compile Include="Models\Enums.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\UserModels.cs" />
@@ -205,6 +206,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Texts.resx</DependentUpon>
     </Compile>
+    <Compile Include="Utils\EnumUtils.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\semantic.css" />

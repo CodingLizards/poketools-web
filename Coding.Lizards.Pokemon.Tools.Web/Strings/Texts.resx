@@ -147,6 +147,60 @@
   <data name="Account_Register_Title" xml:space="preserve">
     <value>Registrieren</value>
   </data>
+  <data name="Enums_Type_Bug" xml:space="preserve">
+    <value>Käfer</value>
+  </data>
+  <data name="Enums_Type_Dark" xml:space="preserve">
+    <value>Unlicht</value>
+  </data>
+  <data name="Enums_Type_Dragon" xml:space="preserve">
+    <value>Drache</value>
+  </data>
+  <data name="Enums_Type_Electric" xml:space="preserve">
+    <value>Elektro</value>
+  </data>
+  <data name="Enums_Type_Fairy" xml:space="preserve">
+    <value>Fee</value>
+  </data>
+  <data name="Enums_Type_Fighting" xml:space="preserve">
+    <value>Kampf</value>
+  </data>
+  <data name="Enums_Type_Fire" xml:space="preserve">
+    <value>Feuer</value>
+  </data>
+  <data name="Enums_Type_Flying" xml:space="preserve">
+    <value>Flug</value>
+  </data>
+  <data name="Enums_Type_Ghost" xml:space="preserve">
+    <value>Geist</value>
+  </data>
+  <data name="Enums_Type_Grass" xml:space="preserve">
+    <value>Pflanze</value>
+  </data>
+  <data name="Enums_Type_Ground" xml:space="preserve">
+    <value>Boden</value>
+  </data>
+  <data name="Enums_Type_Ice" xml:space="preserve">
+    <value>Eis</value>
+  </data>
+  <data name="Enums_Type_Normal" xml:space="preserve">
+    <value>Normal</value>
+  </data>
+  <data name="Enums_Type_Poison" xml:space="preserve">
+    <value>Gift</value>
+  </data>
+  <data name="Enums_Type_Psychic" xml:space="preserve">
+    <value>Psycho</value>
+  </data>
+  <data name="Enums_Type_Rock" xml:space="preserve">
+    <value>Gestein</value>
+  </data>
+  <data name="Enums_Type_Steel" xml:space="preserve">
+    <value>Stahl</value>
+  </data>
+  <data name="Enums_Type_Water" xml:space="preserve">
+    <value>Wasser</value>
+  </data>
   <data name="Or" xml:space="preserve">
     <value>Oder</value>
   </data>
