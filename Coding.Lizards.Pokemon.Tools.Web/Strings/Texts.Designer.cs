@@ -230,5 +230,203 @@ namespace Coding.Lizards.Pokemon.Tools.Web.Strings {
                 return ResourceManager.GetString("Account_Register_Title", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Oder ähnelt.
+        /// </summary>
+        public static string Or {
+            get {
+                return ResourceManager.GetString("Or", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Abbrechen ähnelt.
+        /// </summary>
+        public static string User_Add_Cancel {
+            get {
+                return ResourceManager.GetString("User_Add_Cancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Hinzufügen ähnelt.
+        /// </summary>
+        public static string User_Add_Submit {
+            get {
+                return ResourceManager.GetString("User_Add_Submit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Hinzufügen ähnelt.
+        /// </summary>
+        public static string User_Add_Title {
+            get {
+                return ResourceManager.GetString("User_Add_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Abbrechen ähnelt.
+        /// </summary>
+        public static string User_Delete_Cancel {
+            get {
+                return ResourceManager.GetString("User_Delete_Cancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Soll der Benutzer mit der Emailadresse {0} wirklich gelöscht werden? ähnelt.
+        /// </summary>
+        public static string User_Delete_Content {
+            get {
+                return ResourceManager.GetString("User_Delete_Content", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Löschen ähnelt.
+        /// </summary>
+        public static string User_Delete_Submit {
+            get {
+                return ResourceManager.GetString("User_Delete_Submit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Löschen ähnelt.
+        /// </summary>
+        public static string User_Delete_Title {
+            get {
+                return ResourceManager.GetString("User_Delete_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Löschen ähnelt.
+        /// </summary>
+        public static string User_Details_Delete {
+            get {
+                return ResourceManager.GetString("User_Details_Delete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Bearbeiten ähnelt.
+        /// </summary>
+        public static string User_Details_Edit {
+            get {
+                return ResourceManager.GetString("User_Details_Edit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Details ähnelt.
+        /// </summary>
+        public static string User_Details_Title {
+            get {
+                return ResourceManager.GetString("User_Details_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Abbrechen ähnelt.
+        /// </summary>
+        public static string User_Edit_Cancel {
+            get {
+                return ResourceManager.GetString("User_Edit_Cancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Speichern ähnelt.
+        /// </summary>
+        public static string User_Edit_Submit {
+            get {
+                return ResourceManager.GetString("User_Edit_Submit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Bearbeiten ähnelt.
+        /// </summary>
+        public static string User_Edit_Title {
+            get {
+                return ResourceManager.GetString("User_Edit_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Aktionen ähnelt.
+        /// </summary>
+        public static string User_List_Actions {
+            get {
+                return ResourceManager.GetString("User_List_Actions", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Hinzufügen ähnelt.
+        /// </summary>
+        public static string User_List_Add {
+            get {
+                return ResourceManager.GetString("User_List_Add", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Löschen ähnelt.
+        /// </summary>
+        public static string User_List_Delete {
+            get {
+                return ResourceManager.GetString("User_List_Delete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Bearbeiten ähnelt.
+        /// </summary>
+        public static string User_List_Edit {
+            get {
+                return ResourceManager.GetString("User_List_Edit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Email ähnelt.
+        /// </summary>
+        public static string User_List_Email {
+            get {
+                return ResourceManager.GetString("User_List_Email", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Passwort ähnelt.
+        /// </summary>
+        public static string User_List_Password {
+            get {
+                return ResourceManager.GetString("User_List_Password", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Benutzerverwaltung ähnelt.
+        /// </summary>
+        public static string User_List_Title {
+            get {
+                return ResourceManager.GetString("User_List_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Benutzername ähnelt.
+        /// </summary>
+        public static string User_List_Username {
+            get {
+                return ResourceManager.GetString("User_List_Username", resourceCulture);
+            }
+        }
     }
 }

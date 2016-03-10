@@ -1,0 +1,37 @@
+﻿@model AddUserViewModel
+@{
+    ViewBag.Title = Texts.User_Add_Title;
+}
+
+<div class="ui middle aligned center aligned grid">
+    <div class="ui ten wide left aligned column stacked segment">
+        <div class="ui secondary pointing menu">
+            <div class="header item">@ViewBag.Title</div>
+        </div>
+        @using (Html.BeginForm("Add", "User", FormMethod.Post, new { @class = "ui form", role = "form" })) {
+            @Html.AntiForgeryToken()
+            <div class="field">
+                <div class="ui left icon input">
+                    <i class="user icon"></i>
+                    @Html.TextBoxFor(m => m.Item.Email, new { placeholder = Html.DisplayNameFor(c => c.Item.Email) })
+                </div>
+            </div>
+            <div class="field">
+                <div class="ui left icon input">
+                    <i class="lock icon"></i>
+                    @Html.PasswordFor(m => m.Item.Password, new { placeholder = Html.DisplayNameFor(c => c.Item.Password) })
+                </div>
+            </div>
+            <div class="ui right floated buttons">
+                <a href="/user" class="ui button">@Texts.User_Add_Cancel</a>
+                <div class="or" data-text="@Texts.Or"></div>
+                <button type="submit" class="ui animated submit primary button">
+                    <div class="visible content">@Texts.User_Add_Submit</div>
+                    <div class="hidden content">
+                        <i class="right save icon"></i>
+                    </div>
+                </button>
+            </div>
+        }
+    </div>
+</div>

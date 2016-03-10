@@ -147,6 +147,72 @@
   <data name="Account_Register_Title" xml:space="preserve">
     <value>Registrieren</value>
   </data>
+  <data name="Or" xml:space="preserve">
+    <value>Oder</value>
+  </data>
+  <data name="User_Add_Cancel" xml:space="preserve">
+    <value>Abbrechen</value>
+  </data>
+  <data name="User_Add_Submit" xml:space="preserve">
+    <value>Hinzufügen</value>
+  </data>
+  <data name="User_Add_Title" xml:space="preserve">
+    <value>Hinzufügen</value>
+  </data>
+  <data name="User_Delete_Cancel" xml:space="preserve">
+    <value>Abbrechen</value>
+  </data>
+  <data name="User_Delete_Content" xml:space="preserve">
+    <value>Soll der Benutzer mit der Emailadresse {0} wirklich gelöscht werden?</value>
+  </data>
+  <data name="User_Delete_Submit" xml:space="preserve">
+    <value>Löschen</value>
+  </data>
+  <data name="User_Delete_Title" xml:space="preserve">
+    <value>Löschen</value>
+  </data>
+  <data name="User_Details_Delete" xml:space="preserve">
+    <value>Löschen</value>
+  </data>
+  <data name="User_Details_Edit" xml:space="preserve">
+    <value>Bearbeiten</value>
+  </data>
+  <data name="User_Details_Title" xml:space="preserve">
+    <value>Details</value>
+  </data>
+  <data name="User_Edit_Cancel" xml:space="preserve">
+    <value>Abbrechen</value>
+  </data>
+  <data name="User_Edit_Submit" xml:space="preserve">
+    <value>Speichern</value>
+  </data>
+  <data name="User_Edit_Title" xml:space="preserve">
+    <value>Bearbeiten</value>
+  </data>
+  <data name="User_List_Actions" xml:space="preserve">
+    <value>Aktionen</value>
+  </data>
+  <data name="User_List_Add" xml:space="preserve">
+    <value>Hinzufügen</value>
+  </data>
+  <data name="User_List_Delete" xml:space="preserve">
+    <value>Löschen</value>
+  </data>
+  <data name="User_List_Edit" xml:space="preserve">
+    <value>Bearbeiten</value>
+  </data>
+  <data name="User_List_Email" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="User_List_Password" xml:space="preserve">
+    <value>Passwort</value>
+  </data>
+  <data name="User_List_Title" xml:space="preserve">
+    <value>Benutzerverwaltung</value>
+  </data>
+  <data name="User_List_Username" xml:space="preserve">
+    <value>Benutzername</value>
+  </data>
   <data name="_Layout_Attacks" xml:space="preserve">
     <value>Attacken</value>
   </data>

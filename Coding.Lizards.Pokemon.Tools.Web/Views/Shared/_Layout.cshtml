@@ -60,9 +60,9 @@
                 @Texts._Layout_Title
             </a>
             <a class="item" href="/pokemon/">@Texts._Layout_Pokemon</a>
-            <a class="item" href="/pokemon/attacks">@Texts._Layout_Attacks</a>
+            <a class="item" href="/attacks">@Texts._Layout_Attacks</a>
             @if (User.Identity.IsAuthenticated) {
-                <a href="/admin/usermanager" class="item">@Texts._Layout_Usermanager</a>
+                <a href="/user" class="item">@Texts._Layout_Usermanager</a>
             }
             @Html.Partial("_LoginPartial")
         </div>

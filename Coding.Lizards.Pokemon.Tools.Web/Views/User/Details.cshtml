@@ -1,0 +1,30 @@
+﻿@model DetailsUserViewModel
+@{
+    ViewBag.Title = Texts.User_Details_Title;
+}
+<style>
+    .field .ui.label {
+        width: 100px;
+    }
+</style>
+<div class="ui middle aligned center aligned grid">
+    <div class="ui stacked segment">
+        <div class="ui secondary pointing menu">
+            <div class="header item">@ViewBag.Title</div>
+            <div class="right menu">
+                <a href="@Url.Action("Edit", new { id = Model.Item.Id })" class="item"><i class="edit icon"></i> @Texts.User_Details_Edit</a>
+                <a href="@Url.Action("Delete", new { id = Model.Item.Id })" class="item"><i class="trash icon"></i> @Texts.User_Details_Delete</a>
+            </div>
+        </div>
+        <div class="two fields">
+            <div class="field">
+                <div class="ui label">@Texts.User_List_Email</div>
+                @Html.DisplayFor(m => m.Item.Email)
+            </div>
+            <div class="field">
+                <div class="ui label">@Texts.User_List_Username</div>
+                @Html.DisplayFor(m => m.Item.UserName)
+            </div>
+        </div>
+    </div>
+</div>

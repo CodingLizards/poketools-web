@@ -1,0 +1,28 @@
+﻿@model DeleteUserViewModel
+@{
+    ViewBag.Title = Texts.User_Delete_Title;
+}
+
+<div class="ui middle aligned center aligned grid">
+    @using (Html.BeginForm("Delete", "User", FormMethod.Post, new { @class = "ui compact segment" })) {
+        @Html.HiddenFor(m => m.Item.Email)
+        @Html.HiddenFor(m => m.Item.UserName)
+        @Html.HiddenFor(m => m.Item.Id)
+        <div class="ui secondary pointing menu">
+            <div class="header item">@ViewBag.Title</div>
+        </div>
+        <div class="content">
+            @string.Format(Texts.User_Delete_Content, Model.Item.UserName)
+        </div>
+        <div class="ui right floated buttons">
+            <a href="/user" class="ui button">@Texts.User_Delete_Cancel</a>
+            <div class="or" data-text="@Texts.Or"></div>
+            <button type="submit" class="ui animated submit primary button">
+                <div class="visible content">@Texts.User_Delete_Submit</div>
+                <div class="hidden content">
+                    <i class="right save icon"></i>
+                </div>
+            </button>
+        </div>
+    }
+</div>
