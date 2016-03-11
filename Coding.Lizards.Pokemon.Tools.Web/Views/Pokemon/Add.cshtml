@@ -9,7 +9,11 @@
             <div class="header item">@ViewBag.Title</div>
         </div>
         @using (Html.BeginForm("Add", "Pokemon", FormMethod.Post, new { @class = "ui form", role = "form", enctype = "multipart/form-data" })) {
-            <div class="three fields">
+            <div class="four fields">
+                <div class="field">
+                    <label for="@Html.IdFor(m => m.Item.Id)">#</label>
+                    @Html.TextBoxFor(m => m.Item.Id)
+                </div>
                 <div class="field">
                     @Html.LabelFor(m => m.Item.EnglishName)
                     @Html.TextBoxFor(m => m.Item.EnglishName)
