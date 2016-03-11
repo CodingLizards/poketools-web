@@ -232,6 +232,258 @@ namespace Coding.Lizards.Pokemon.Tools.Web.Strings {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Abbrechen ähnelt.
+        /// </summary>
+        public static string Attack_Add_Cancel {
+            get {
+                return ResourceManager.GetString("Attack_Add_Cancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Hinzufügen ähnelt.
+        /// </summary>
+        public static string Attack_Add_Submit {
+            get {
+                return ResourceManager.GetString("Attack_Add_Submit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Attacke hinzufügen ähnelt.
+        /// </summary>
+        public static string Attack_Add_Title {
+            get {
+                return ResourceManager.GetString("Attack_Add_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Abbrechen ähnelt.
+        /// </summary>
+        public static string Attack_Delete_Cancel {
+            get {
+                return ResourceManager.GetString("Attack_Delete_Cancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Soll die Attacke {0} wirklich gelöscht werden? ähnelt.
+        /// </summary>
+        public static string Attack_Delete_Content {
+            get {
+                return ResourceManager.GetString("Attack_Delete_Content", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Löschen ähnelt.
+        /// </summary>
+        public static string Attack_Delete_Submit {
+            get {
+                return ResourceManager.GetString("Attack_Delete_Submit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Attacke löschen ähnelt.
+        /// </summary>
+        public static string Attack_Delete_Title {
+            get {
+                return ResourceManager.GetString("Attack_Delete_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Attacke löschen ähnelt.
+        /// </summary>
+        public static string Attack_Details_Delete {
+            get {
+                return ResourceManager.GetString("Attack_Details_Delete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Attacke bearbeiten ähnelt.
+        /// </summary>
+        public static string Attack_Details_Edit {
+            get {
+                return ResourceManager.GetString("Attack_Details_Edit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Details ähnelt.
+        /// </summary>
+        public static string Attack_Details_Title {
+            get {
+                return ResourceManager.GetString("Attack_Details_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Abbrechen ähnelt.
+        /// </summary>
+        public static string Attack_Edit_Cancel {
+            get {
+                return ResourceManager.GetString("Attack_Edit_Cancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Speichern ähnelt.
+        /// </summary>
+        public static string Attack_Edit_Submit {
+            get {
+                return ResourceManager.GetString("Attack_Edit_Submit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Attacke bearbeiten ähnelt.
+        /// </summary>
+        public static string Attack_Edit_Title {
+            get {
+                return ResourceManager.GetString("Attack_Edit_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Genauigkeit ähnelt.
+        /// </summary>
+        public static string Attack_List_Accuracy {
+            get {
+                return ResourceManager.GetString("Attack_List_Accuracy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Aktionen ähnelt.
+        /// </summary>
+        public static string Attack_List_Actions {
+            get {
+                return ResourceManager.GetString("Attack_List_Actions", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Attacke hinzufügen ähnelt.
+        /// </summary>
+        public static string Attack_List_Add {
+            get {
+                return ResourceManager.GetString("Attack_List_Add", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Attacke löschen ähnelt.
+        /// </summary>
+        public static string Attack_List_Delete {
+            get {
+                return ResourceManager.GetString("Attack_List_Delete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Attacke bearbeiten ähnelt.
+        /// </summary>
+        public static string Attack_List_Edit {
+            get {
+                return ResourceManager.GetString("Attack_List_Edit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Englischer Name ähnelt.
+        /// </summary>
+        public static string Attack_List_EnglishName {
+            get {
+                return ResourceManager.GetString("Attack_List_EnglishName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Französicher Name ähnelt.
+        /// </summary>
+        public static string Attack_List_FrenchName {
+            get {
+                return ResourceManager.GetString("Attack_List_FrenchName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Deutscher Name ähnelt.
+        /// </summary>
+        public static string Attack_List_GermanName {
+            get {
+                return ResourceManager.GetString("Attack_List_GermanName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Name ähnelt.
+        /// </summary>
+        public static string Attack_List_Name {
+            get {
+                return ResourceManager.GetString("Attack_List_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Stärke ähnelt.
+        /// </summary>
+        public static string Attack_List_Strength {
+            get {
+                return ResourceManager.GetString("Attack_List_Strength", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Attacken ähnelt.
+        /// </summary>
+        public static string Attack_List_Title {
+            get {
+                return ResourceManager.GetString("Attack_List_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Typ ähnelt.
+        /// </summary>
+        public static string Attack_List_Type {
+            get {
+                return ResourceManager.GetString("Attack_List_Type", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Physisch ähnelt.
+        /// </summary>
+        public static string Enums_DamageClass_Physical {
+            get {
+                return ResourceManager.GetString("Enums_DamageClass_Physical", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Spezial ähnelt.
+        /// </summary>
+        public static string Enums_DamageClass_Special {
+            get {
+                return ResourceManager.GetString("Enums_DamageClass_Special", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Status ähnelt.
+        /// </summary>
+        public static string Enums_DamageClass_Status {
+            get {
+                return ResourceManager.GetString("Enums_DamageClass_Status", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Käfer ähnelt.
         /// </summary>
         public static string Enums_Type_Bug {
@@ -394,7 +646,7 @@ namespace Coding.Lizards.Pokemon.Tools.Web.Strings {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Erratic ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Erratic (max. 600.000) ähnelt.
         /// </summary>
         public static string Enums_XpType_Erratic {
             get {
@@ -403,7 +655,7 @@ namespace Coding.Lizards.Pokemon.Tools.Web.Strings {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Schnell ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Schnell (max. 800.000 EP) ähnelt.
         /// </summary>
         public static string Enums_XpType_Fast {
             get {
@@ -412,7 +664,7 @@ namespace Coding.Lizards.Pokemon.Tools.Web.Strings {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Fluctuating ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Fluctuating (max. 1.640.000 EP) ähnelt.
         /// </summary>
         public static string Enums_XpType_Fluctuating {
             get {
@@ -421,7 +673,7 @@ namespace Coding.Lizards.Pokemon.Tools.Web.Strings {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Mittel-Schnell ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Mittel-Schnell (max. 1.000.000 EP) ähnelt.
         /// </summary>
         public static string Enums_XpType_MediumFast {
             get {
@@ -430,7 +682,7 @@ namespace Coding.Lizards.Pokemon.Tools.Web.Strings {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Mittel-Langsam ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Mittel-Langsam (max. 1.059.860 EP) ähnelt.
         /// </summary>
         public static string Enums_XpType_MediumSlow {
             get {
@@ -439,7 +691,7 @@ namespace Coding.Lizards.Pokemon.Tools.Web.Strings {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Langsam ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Langsam (max. 1.250.000 EP) ähnelt.
         /// </summary>
         public static string Enums_XpType_Slow {
             get {
@@ -538,6 +790,87 @@ namespace Coding.Lizards.Pokemon.Tools.Web.Strings {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Aktueller Angriff ähnelt.
+        /// </summary>
+        public static string Pokemon_Details_CurrentAttack {
+            get {
+                return ResourceManager.GetString("Pokemon_Details_CurrentAttack", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Aktuelle Verteidigung ähnelt.
+        /// </summary>
+        public static string Pokemon_Details_CurrentDefense {
+            get {
+                return ResourceManager.GetString("Pokemon_Details_CurrentDefense", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Aktuelle KP ähnelt.
+        /// </summary>
+        public static string Pokemon_Details_CurrentHealth {
+            get {
+                return ResourceManager.GetString("Pokemon_Details_CurrentHealth", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Aktuelle maximal Werte ähnelt.
+        /// </summary>
+        public static string Pokemon_Details_CurrentMaxValues {
+            get {
+                return ResourceManager.GetString("Pokemon_Details_CurrentMaxValues", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Aktuelle minimal Werte ähnelt.
+        /// </summary>
+        public static string Pokemon_Details_CurrentMinValues {
+            get {
+                return ResourceManager.GetString("Pokemon_Details_CurrentMinValues", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Aktueller Spezialangriff ähnelt.
+        /// </summary>
+        public static string Pokemon_Details_CurrentSpecialAttack {
+            get {
+                return ResourceManager.GetString("Pokemon_Details_CurrentSpecialAttack", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Aktuelle Spezialverteidigung ähnelt.
+        /// </summary>
+        public static string Pokemon_Details_CurrentSpecialDefense {
+            get {
+                return ResourceManager.GetString("Pokemon_Details_CurrentSpecialDefense", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Aktuelle Initiative ähnelt.
+        /// </summary>
+        public static string Pokemon_Details_CurrentSpeed {
+            get {
+                return ResourceManager.GetString("Pokemon_Details_CurrentSpeed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Aktuelle Werte ähnelt.
+        /// </summary>
+        public static string Pokemon_Details_CurrentValues {
+            get {
+                return ResourceManager.GetString("Pokemon_Details_CurrentValues", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Pokémon löschen ähnelt.
         /// </summary>
         public static string Pokemon_Details_Delete {
@@ -552,6 +885,15 @@ namespace Coding.Lizards.Pokemon.Tools.Web.Strings {
         public static string Pokemon_Details_Edit {
             get {
                 return ResourceManager.GetString("Pokemon_Details_Edit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Level ähnelt.
+        /// </summary>
+        public static string Pokemon_Details_Level {
+            get {
+                return ResourceManager.GetString("Pokemon_Details_Level", resourceCulture);
             }
         }
         

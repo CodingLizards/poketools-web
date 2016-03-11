@@ -183,6 +183,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AttackController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -197,7 +198,9 @@
     <Compile Include="Models\Enums.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\AttackModels.cs" />
     <Compile Include="Models\PokemonModels.cs" />
+    <Compile Include="Models\AttackViewModels.cs" />
     <Compile Include="Models\PokemonViewModels.cs" />
     <Compile Include="Models\UserModels.cs" />
     <Compile Include="Models\UserViewModels.cs" />
@@ -281,6 +284,11 @@
     <Content Include="Views\Pokemon\Details.cshtml" />
     <Content Include="Views\Pokemon\Edit.cshtml" />
     <Content Include="Views\Pokemon\Delete.cshtml" />
+    <Content Include="Views\Attack\Add.cshtml" />
+    <Content Include="Views\Attack\Delete.cshtml" />
+    <Content Include="Views\Attack\Details.cshtml" />
+    <Content Include="Views\Attack\Edit.cshtml" />
+    <Content Include="Views\Attack\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

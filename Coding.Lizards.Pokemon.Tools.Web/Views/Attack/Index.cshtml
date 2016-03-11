@@ -1,0 +1,44 @@
+﻿@model ListAttackViewModel
+@{
+    ViewBag.Title = Texts.Attack_List_Title;
+}
+
+<div class="ui stacked segment">
+    <div class="ui secondary pointing menu">
+        <div class="header item">@ViewBag.Title</div>
+        @if (User.Identity.IsAuthenticated) {
+            <a class="right item" href="@Url.Action("Add")"><i class="add icon"></i> @Texts.User_List_Add</a>
+        }
+    </div>
+    <table class="ui compact striped table">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>@Texts.Attack_List_Name</th>
+                <th>@Texts.Attack_List_Type</th>
+                <th>@Texts.Attack_List_Accuracy</th>
+                <th>@Texts.Attack_List_Strength</th>
+                <th>@Texts.Attack_List_Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model) {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>
+                        @Html.ActionLink(item.GetLocalizedName(), "Details", new { id = item.Id })
+                    </td>
+                    <td>@item.Type.DisplayName()</td>
+                    <td>@item.Accuracy</td>
+                    <td>@item.Strength</td>
+                    <td>
+                        <div class="ui buttons">
+                            <a href="@Url.Action("Edit", new { id = item.Id })" class="ui tiny button"><i class="edit icon"></i> @Texts.Attack_List_Edit</a>
+                            <a href="@Url.Action("Delete", new { id = item.Id })" class="ui tiny red button"><i class="trash icon"></i> @Texts.Attack_List_Delete</a>
+                        </div>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

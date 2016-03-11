@@ -42,7 +42,6 @@
             left: 800px;
         }
 
-
         .ui.footer.segment {
             margin: 5em 0em 0em;
             padding: 5em 0em;
@@ -50,6 +49,10 @@
 
         body {
             background: url(http://www.pokewiki.de/images/e/e4/ORAS_Hoenn_Map.jpg) no-repeat center 8px fixed;
+        }
+
+        .ui.stacked.segment {
+            margin-bottom: 5em;
         }
     </style>
 </head>
@@ -60,7 +63,7 @@
                 @Texts._Layout_Title
             </a>
             <a class="item" href="/pokemon/">@Texts._Layout_Pokemon</a>
-            <a class="item" href="/attacks">@Texts._Layout_Attacks</a>
+            <a class="item" href="/attack/">@Texts._Layout_Attacks</a>
             @if (User.Identity.IsAuthenticated) {
                 <a href="/user" class="item">@Texts._Layout_Usermanager</a>
             }
@@ -89,5 +92,4 @@
         });
     </script>
 </body>
-
 </html>

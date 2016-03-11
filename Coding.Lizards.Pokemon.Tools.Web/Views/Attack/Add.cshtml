@@ -1,0 +1,61 @@
+﻿@model AddAttackViewModel
+@{
+    ViewBag.Title = Texts.Attack_Add_Title;
+}
+
+<div class="ui middle aligned center aligned grid">
+    <div class="ui twelve wide left aligned column stacked segment">
+        <div class="ui secondary pointing menu">
+            <div class="header item">@ViewBag.Title</div>
+        </div>
+        @using (Html.BeginForm("Add", "Attack", FormMethod.Post, new { @class = "ui form", role = "form" })) {
+            <div class="four fields">
+                <div class="field">
+                    <label for="@Html.IdFor(m => m.Item.Id)">#</label>
+                    @Html.TextBoxFor(m => m.Item.Id)
+                </div>
+                <div class="field">
+                    @Html.LabelFor(m => m.Item.EnglishName)
+                    @Html.TextBoxFor(m => m.Item.EnglishName)
+                </div>
+                <div class="field">
+                    @Html.LabelFor(m => m.Item.GermanName)
+                    @Html.TextBoxFor(m => m.Item.GermanName)
+                </div>
+                <div class="field">
+                    @Html.LabelFor(m => m.Item.FrenchName)
+                    @Html.TextBoxFor(m => m.Item.FrenchName)
+                </div>
+            </div>
+            <div class="three fields">
+                <div class="field">
+                    @Html.LabelFor(m => m.Item.Accuracy)
+                    @Html.TextBoxFor(m => m.Item.Accuracy)
+                </div>
+                <div class="field">
+                    @Html.LabelFor(m => m.Item.Strength)
+                    @Html.TextBoxFor(m => m.Item.Strength)
+                </div>
+                <div class="field">
+                    @Html.LabelFor(m => m.Item.Type)
+                    @Html.EnumDropDownListFor(m => m.Item.Type)
+                </div>
+            </div>
+            <div class="ui right floated buttons">
+                <a href="/user" class="ui button">@Texts.Attack_Add_Cancel</a>
+                <div class="or" data-text="@Texts.Or"></div>
+                <button type="submit" class="ui animated submit primary button">
+                    <div class="visible content">@Texts.Attack_Add_Submit</div>
+                    <div class="hidden content">
+                        <i class="right save icon"></i>
+                    </div>
+                </button>
+            </div>
+        }
+    </div>
+</div>
+@section scripts {
+    <script>
+        $('select').dropdown();
+    </script>
+}

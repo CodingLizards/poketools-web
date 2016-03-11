@@ -147,6 +147,90 @@
   <data name="Account_Register_Title" xml:space="preserve">
     <value>Registrieren</value>
   </data>
+  <data name="Attack_Add_Cancel" xml:space="preserve">
+    <value>Abbrechen</value>
+  </data>
+  <data name="Attack_Add_Submit" xml:space="preserve">
+    <value>Hinzufügen</value>
+  </data>
+  <data name="Attack_Add_Title" xml:space="preserve">
+    <value>Attacke hinzufügen</value>
+  </data>
+  <data name="Attack_Delete_Cancel" xml:space="preserve">
+    <value>Abbrechen</value>
+  </data>
+  <data name="Attack_Delete_Content" xml:space="preserve">
+    <value>Soll die Attacke {0} wirklich gelöscht werden?</value>
+  </data>
+  <data name="Attack_Delete_Submit" xml:space="preserve">
+    <value>Löschen</value>
+  </data>
+  <data name="Attack_Delete_Title" xml:space="preserve">
+    <value>Attacke löschen</value>
+  </data>
+  <data name="Attack_Details_Delete" xml:space="preserve">
+    <value>Attacke löschen</value>
+  </data>
+  <data name="Attack_Details_Edit" xml:space="preserve">
+    <value>Attacke bearbeiten</value>
+  </data>
+  <data name="Attack_Details_Title" xml:space="preserve">
+    <value>Details</value>
+  </data>
+  <data name="Attack_Edit_Cancel" xml:space="preserve">
+    <value>Abbrechen</value>
+  </data>
+  <data name="Attack_Edit_Submit" xml:space="preserve">
+    <value>Speichern</value>
+  </data>
+  <data name="Attack_Edit_Title" xml:space="preserve">
+    <value>Attacke bearbeiten</value>
+  </data>
+  <data name="Attack_List_Accuracy" xml:space="preserve">
+    <value>Genauigkeit</value>
+  </data>
+  <data name="Attack_List_Actions" xml:space="preserve">
+    <value>Aktionen</value>
+  </data>
+  <data name="Attack_List_Add" xml:space="preserve">
+    <value>Attacke hinzufügen</value>
+  </data>
+  <data name="Attack_List_Delete" xml:space="preserve">
+    <value>Attacke löschen</value>
+  </data>
+  <data name="Attack_List_Edit" xml:space="preserve">
+    <value>Attacke bearbeiten</value>
+  </data>
+  <data name="Attack_List_EnglishName" xml:space="preserve">
+    <value>Englischer Name</value>
+  </data>
+  <data name="Attack_List_FrenchName" xml:space="preserve">
+    <value>Französicher Name</value>
+  </data>
+  <data name="Attack_List_GermanName" xml:space="preserve">
+    <value>Deutscher Name</value>
+  </data>
+  <data name="Attack_List_Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="Attack_List_Strength" xml:space="preserve">
+    <value>Stärke</value>
+  </data>
+  <data name="Attack_List_Title" xml:space="preserve">
+    <value>Attacken</value>
+  </data>
+  <data name="Attack_List_Type" xml:space="preserve">
+    <value>Typ</value>
+  </data>
+  <data name="Enums_DamageClass_Physical" xml:space="preserve">
+    <value>Physisch</value>
+  </data>
+  <data name="Enums_DamageClass_Special" xml:space="preserve">
+    <value>Spezial</value>
+  </data>
+  <data name="Enums_DamageClass_Status" xml:space="preserve">
+    <value>Status</value>
+  </data>
   <data name="Enums_Type_Bug" xml:space="preserve">
     <value>Käfer</value>
   </data>
@@ -202,22 +286,22 @@
     <value>Wasser</value>
   </data>
   <data name="Enums_XpType_Erratic" xml:space="preserve">
-    <value>Erratic</value>
+    <value>Erratic (max. 600.000)</value>
   </data>
   <data name="Enums_XpType_Fast" xml:space="preserve">
-    <value>Schnell</value>
+    <value>Schnell (max. 800.000 EP)</value>
   </data>
   <data name="Enums_XpType_Fluctuating" xml:space="preserve">
-    <value>Fluctuating</value>
+    <value>Fluctuating (max. 1.640.000 EP)</value>
   </data>
   <data name="Enums_XpType_MediumFast" xml:space="preserve">
-    <value>Mittel-Schnell</value>
+    <value>Mittel-Schnell (max. 1.000.000 EP)</value>
   </data>
   <data name="Enums_XpType_MediumSlow" xml:space="preserve">
-    <value>Mittel-Langsam</value>
+    <value>Mittel-Langsam (max. 1.059.860 EP)</value>
   </data>
   <data name="Enums_XpType_Slow" xml:space="preserve">
-    <value>Langsam</value>
+    <value>Langsam (max. 1.250.000 EP)</value>
   </data>
   <data name="Or" xml:space="preserve">
     <value>Oder</value>
@@ -249,11 +333,41 @@
   <data name="Pokemon_Details_BaseValues" xml:space="preserve">
     <value>Basiswerte</value>
   </data>
+  <data name="Pokemon_Details_CurrentAttack" xml:space="preserve">
+    <value>Aktueller Angriff</value>
+  </data>
+  <data name="Pokemon_Details_CurrentDefense" xml:space="preserve">
+    <value>Aktuelle Verteidigung</value>
+  </data>
+  <data name="Pokemon_Details_CurrentHealth" xml:space="preserve">
+    <value>Aktuelle KP</value>
+  </data>
+  <data name="Pokemon_Details_CurrentMaxValues" xml:space="preserve">
+    <value>Aktuelle maximal Werte</value>
+  </data>
+  <data name="Pokemon_Details_CurrentMinValues" xml:space="preserve">
+    <value>Aktuelle minimal Werte</value>
+  </data>
+  <data name="Pokemon_Details_CurrentSpecialAttack" xml:space="preserve">
+    <value>Aktueller Spezialangriff</value>
+  </data>
+  <data name="Pokemon_Details_CurrentSpecialDefense" xml:space="preserve">
+    <value>Aktuelle Spezialverteidigung</value>
+  </data>
+  <data name="Pokemon_Details_CurrentSpeed" xml:space="preserve">
+    <value>Aktuelle Initiative</value>
+  </data>
+  <data name="Pokemon_Details_CurrentValues" xml:space="preserve">
+    <value>Aktuelle Werte</value>
+  </data>
   <data name="Pokemon_Details_Delete" xml:space="preserve">
     <value>Pokémon löschen</value>
   </data>
   <data name="Pokemon_Details_Edit" xml:space="preserve">
     <value>Pokémon bearbeiten</value>
+  </data>
+  <data name="Pokemon_Details_Level" xml:space="preserve">
+    <value>Level</value>
   </data>
   <data name="Pokemon_Details_Title" xml:space="preserve">
     <value>Details</value>

@@ -3,6 +3,18 @@
     using Strings;
     using System.ComponentModel.DataAnnotations;
 
+    public enum DamageClass {
+
+        [Display(ResourceType = typeof(Texts), Name = "Enums_DamageClass_Physical")]
+        Physical,
+
+        [Display(ResourceType = typeof(Texts), Name = "Enums_DamageClass_Special")]
+        Special,
+
+        [Display(ResourceType = typeof(Texts), Name = "Enums_DamageClass_Status")]
+        Status
+    }
+
     public enum ExperienceType {
 
         [Display(ResourceType = typeof(Texts), Name = "Enums_XpType_Fast")]
