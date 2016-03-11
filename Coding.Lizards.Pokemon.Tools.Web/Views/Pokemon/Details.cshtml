@@ -7,7 +7,7 @@
     <div class="ui twelve wide left aligned column stacked segment">
         <div class="ui secondary pointing menu">
             <div class="item"><img class="ui image" height="17" width="20" src="@Url.Action("GetThumbnail", new { id = Model.Item.Id })" alt="" /></div>
-            <div class="header item">@Model.Item.GetLocalizedName() @ViewBag.Title</div>
+            <div class="header item">@Model.Item.GetLocalizedName() &mdash; @ViewBag.Title</div>
             @if (User.Identity.IsAuthenticated) {
                 <div class="right menu">
                     <a href="@Url.Action("Edit", new { id = Model.Item.Id })" class="item"><i class="edit icon"></i> @Texts.Pokemon_Details_Edit</a>
@@ -112,6 +112,138 @@
                     </div>
                 </div>
             </div>
+            <h4 class="ui dividing header">
+                @Texts.Pokemon_Details_ValuesOnLevel &mdash; @Texts.Pokemon_Details_Level:
+                <div class="ui inline dropdown">
+                    <div class="text">1</div>
+                    <i class="dropdown icon"></i>
+                    <div class="menu">
+                        @foreach (var item in Enumerable.Range(1, 100)) {
+                            <div class="item">@item</div>
+                        }
+                    </div>
+                </div>
+            </h4>
+            <h5 class="ui dividing header">@Texts.Pokemon_Details_CurrentMinValues</h5>
+            <div class="three fields">
+                <div class="field">
+                    <label>@Texts.Pokemon_Details_CurrentHealth</label>
+                    <div class="ui transparent input">
+                        <input value="" id="minhealth" />
+                    </div>
+                </div>
+                <div class="field">
+                    <label>@Texts.Pokemon_Details_CurrentAttack</label>
+                    <div class="ui transparent input">
+                        <input value="" id="minattack" />
+                    </div>
+                </div>
+                <div class="field">
+                    <label>@Texts.Pokemon_Details_CurrentDefense</label>
+                    <div class="ui transparent input">
+                        <input value="" id="mindefense" />
+                    </div>
+                </div>
+            </div>
+            <div class="three fields">
+                <div class="field">
+                    <label>@Texts.Pokemon_Details_CurrentSpeed</label>
+                    <div class="ui transparent input">
+                        <input value="" id="minspeed" />
+                    </div>
+                </div>
+                <div class="field">
+                    <label>@Texts.Pokemon_Details_CurrentSpecialAttack</label>
+                    <div class="ui transparent input">
+                        <input value="" id="minspecialattack" />
+                    </div>
+                </div>
+                <div class="field">
+                    <label>@Texts.Pokemon_Details_CurrentSpecialDefense</label>
+                    <div class="ui transparent input">
+                        <input value="" id="minspecialdefense" />
+                    </div>
+                </div>
+            </div>
+            <h5 class="ui dividing header">@Texts.Pokemon_Details_CurrentMaxValues</h5>
+            <div class="three fields">
+                <div class="field">
+                    <label>@Texts.Pokemon_Details_CurrentHealth</label>
+                    <div class="ui transparent input">
+                        <input value="" id="maxhealth" />
+                    </div>
+                </div>
+                <div class="field">
+                    <label>@Texts.Pokemon_Details_CurrentAttack</label>
+                    <div class="ui transparent input">
+                        <input value="" id="maxattack" />
+                    </div>
+                </div>
+                <div class="field">
+                    <label>@Texts.Pokemon_Details_CurrentDefense</label>
+                    <div class="ui transparent input">
+                        <input value="" id="maxdefense" />
+                    </div>
+                </div>
+            </div>
+            <div class="three fields">
+                <div class="field">
+                    <label>@Texts.Pokemon_Details_CurrentSpeed</label>
+                    <div class="ui transparent input">
+                        <input value="" id="maxspeed" />
+                    </div>
+                </div>
+                <div class="field">
+                    <label>@Texts.Pokemon_Details_CurrentSpecialAttack</label>
+                    <div class="ui transparent input">
+                        <input value="" id="maxspecialattack" />
+                    </div>
+                </div>
+                <div class="field">
+                    <label>@Texts.Pokemon_Details_CurrentSpecialDefense</label>
+                    <div class="ui transparent input">
+                        <input value="" id="maxspecialdefense" />
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
+@section scripts {
+    <script>
+        $(function () {
+            var recalculate = function (level) {
+                var calculateHp = function (base, dv, fp) {
+                    return Math.floor((2 * base + dv + (fp / 4) + 100) * (level / 100) + 10);
+                };
+                var calculateOther = function (base, dv, fp) {
+                    return Math.floor(((2 * base + dv + (fp / 4)) * (level / 100) + 5) * 1);
+                };
+
+                $('#minhealth').val(calculateHp(@Model.Item.BaseHealth, 1, 1));
+                $('#maxhealth').val(calculateHp(@Model.Item.BaseHealth, 31, 252));
+
+                $('#minattack').val(calculateOther(@Model.Item.BaseAttack, 1, 1));
+                $('#maxattack').val(calculateOther(@Model.Item.BaseAttack, 31, 252));
+
+                $('#mindefense').val(calculateOther(@Model.Item.BaseDefense, 1, 1));
+                $('#maxdefense').val(calculateOther(@Model.Item.BaseDefense, 31, 252));
+
+                $('#minspecialattack').val(calculateOther(@Model.Item.BaseSpecialAttack, 1, 1));
+                $('#maxspecialattack').val(calculateOther(@Model.Item.BaseSpecialAttack, 31, 252));
+
+                $('#minspecialdefense').val(calculateOther(@Model.Item.BaseSpecialDefense, 1, 1));
+                $('#maxspecialdefense').val(calculateOther(@Model.Item.BaseSpecialDefense, 31, 252));
+
+                $('#minspeed').val(calculateOther(@Model.Item.BaseSpeed, 1, 1));
+                $('#maxspeed').val(calculateOther(@Model.Item.BaseSpeed, 31, 252));
+            };
+            $('.ui.dropdown').addClass('inline compact scrolling').dropdown({
+                onChange: function (value, text, $choice) {
+                    recalculate(parseInt(value));
+                }
+            });
+            recalculate(1);
+        });
+    </script>
+}

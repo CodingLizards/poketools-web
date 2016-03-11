@@ -32,8 +32,10 @@
                     <td>@item.FirstType.DisplayName()</td>
                     <td>@item.SecondType.DisplayName()</td>
                     <td>
-                        <a href="@Url.Action("Edit", new { id = item.Id })" class="ui tiny button"><i class="edit icon"></i> @Texts.Pokemon_List_Edit</a>
-                        <a href="@Url.Action("Delete", new { id = item.Id })" class="ui tiny red button"><i class="trash icon"></i> @Texts.Pokemon_List_Delete</a>
+                        <div class="ui buttons">
+                            <a href="@Url.Action("Edit", new { id = item.Id })" class="ui tiny button"><i class="edit icon"></i> @Texts.Pokemon_List_Edit</a>
+                            <a href="@Url.Action("Delete", new { id = item.Id })" class="ui tiny red button"><i class="trash icon"></i> @Texts.Pokemon_List_Delete</a>
+                        </div>
                     </td>
                 </tr>
             }

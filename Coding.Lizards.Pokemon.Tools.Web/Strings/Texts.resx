@@ -357,9 +357,6 @@
   <data name="Pokemon_Details_CurrentSpeed" xml:space="preserve">
     <value>Aktuelle Initiative</value>
   </data>
-  <data name="Pokemon_Details_CurrentValues" xml:space="preserve">
-    <value>Aktuelle Werte</value>
-  </data>
   <data name="Pokemon_Details_Delete" xml:space="preserve">
     <value>Pokémon löschen</value>
   </data>
@@ -371,6 +368,9 @@
   </data>
   <data name="Pokemon_Details_Title" xml:space="preserve">
     <value>Details</value>
+  </data>
+  <data name="Pokemon_Details_ValuesOnLevel" xml:space="preserve">
+    <value>Werte auf Level</value>
   </data>
   <data name="Pokemon_Edit_BaseValues" xml:space="preserve">
     <value>Basiswerte</value>

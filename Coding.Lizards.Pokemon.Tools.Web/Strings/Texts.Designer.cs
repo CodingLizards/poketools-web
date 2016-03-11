@@ -862,15 +862,6 @@ namespace Coding.Lizards.Pokemon.Tools.Web.Strings {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Aktuelle Werte ähnelt.
-        /// </summary>
-        public static string Pokemon_Details_CurrentValues {
-            get {
-                return ResourceManager.GetString("Pokemon_Details_CurrentValues", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Pokémon löschen ähnelt.
         /// </summary>
         public static string Pokemon_Details_Delete {
@@ -903,6 +894,15 @@ namespace Coding.Lizards.Pokemon.Tools.Web.Strings {
         public static string Pokemon_Details_Title {
             get {
                 return ResourceManager.GetString("Pokemon_Details_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Werte auf Level ähnelt.
+        /// </summary>
+        public static string Pokemon_Details_ValuesOnLevel {
+            get {
+                return ResourceManager.GetString("Pokemon_Details_ValuesOnLevel", resourceCulture);
             }
         }
         
