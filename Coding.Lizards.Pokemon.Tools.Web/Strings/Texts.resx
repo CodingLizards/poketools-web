@@ -204,6 +204,78 @@
   <data name="Or" xml:space="preserve">
     <value>Oder</value>
   </data>
+  <data name="Pokemon_Add_BaseValues" xml:space="preserve">
+    <value>Basiswerte</value>
+  </data>
+  <data name="Pokemon_Add_Cancel" xml:space="preserve">
+    <value>Abbrechen</value>
+  </data>
+  <data name="Pokemon_Add_Submit" xml:space="preserve">
+    <value>Hinzufügen</value>
+  </data>
+  <data name="Pokemon_Add_Title" xml:space="preserve">
+    <value>Pokémon hinzufügen</value>
+  </data>
+  <data name="Pokemon_List_Actions" xml:space="preserve">
+    <value>Aktionen</value>
+  </data>
+  <data name="Pokemon_List_Add" xml:space="preserve">
+    <value>Pokémon hinzufügen</value>
+  </data>
+  <data name="Pokemon_List_BaseAttack" xml:space="preserve">
+    <value>Basis Attacke</value>
+  </data>
+  <data name="Pokemon_List_BaseDefense" xml:space="preserve">
+    <value>Basis Verteidigung</value>
+  </data>
+  <data name="Pokemon_List_BaseExperience" xml:space="preserve">
+    <value>Basiswert</value>
+  </data>
+  <data name="Pokemon_List_BaseHealth" xml:space="preserve">
+    <value>Basis Gesundheit</value>
+  </data>
+  <data name="Pokemon_List_BaseSpecialAttack" xml:space="preserve">
+    <value>Basis Spezialattacke</value>
+  </data>
+  <data name="Pokemon_List_BaseSpecialDefense" xml:space="preserve">
+    <value>Basis Spezialverteidigung</value>
+  </data>
+  <data name="Pokemon_List_BaseSpeed" xml:space="preserve">
+    <value>Basis Geschwindigkeit</value>
+  </data>
+  <data name="Pokemon_List_Delete" xml:space="preserve">
+    <value>Pokémon löschen</value>
+  </data>
+  <data name="Pokemon_List_Edit" xml:space="preserve">
+    <value>Pokémon bearbeiten</value>
+  </data>
+  <data name="Pokemon_List_EnglishName" xml:space="preserve">
+    <value>Englischer Name</value>
+  </data>
+  <data name="Pokemon_List_FirstType" xml:space="preserve">
+    <value>Erster Typ</value>
+  </data>
+  <data name="Pokemon_List_FrenchName" xml:space="preserve">
+    <value>Französicher Name</value>
+  </data>
+  <data name="Pokemon_List_GermanName" xml:space="preserve">
+    <value>Deutscher Name</value>
+  </data>
+  <data name="Pokemon_List_Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="Pokemon_List_SecondType" xml:space="preserve">
+    <value>Zweiter Typ</value>
+  </data>
+  <data name="Pokemon_List_Sprite" xml:space="preserve">
+    <value>Sprite</value>
+  </data>
+  <data name="Pokemon_List_Thumbnail" xml:space="preserve">
+    <value>Icon</value>
+  </data>
+  <data name="Pokemon_List_Title" xml:space="preserve">
+    <value>Pokémon</value>
+  </data>
   <data name="User_Add_Cancel" xml:space="preserve">
     <value>Abbrechen</value>
   </data>

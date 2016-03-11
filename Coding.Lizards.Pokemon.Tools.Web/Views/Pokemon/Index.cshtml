@@ -1,6 +1,42 @@
-﻿@{
-    ViewBag.Title = "Index";
+﻿@model ListPokemonViewModel
+@{
+    ViewBag.Title = Texts.Pokemon_List_Title;
 }
 
-<h2>Index</h2>
-
+<div class="ui stacked segment">
+    <div class="ui secondary pointing menu">
+        <div class="header item">@ViewBag.Title</div>
+        @if (User.Identity.IsAuthenticated) {
+            <a class="right item" href="@Url.Action("Add")"><i class="add icon"></i> @Texts.User_List_Add</a>
+        }
+    </div>
+    <table class="ui compact striped table">
+        <thead>
+            <tr>
+                <th></th>
+                <th>#</th>
+                <th>@Texts.Pokemon_List_Name</th>
+                <th>@Texts.Pokemon_List_FirstType</th>
+                <th>@Texts.Pokemon_List_SecondType</th>
+                <th>@Texts.Pokemon_List_Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model) {
+                <tr>
+                    <td><img src="@Url.Action("GetThumbnail", new { id = item.Id })" alt="" /></td>
+                    <td>@item.Id</td>
+                    <td>
+                        @Html.ActionLink(item.GetLocalizedName(), "Details", new { id = item.Id })
+                    </td>
+                    <td>@item.FirstType</td>
+                    <td>@item.SecondType</td>
+                    <td>
+                        <a href="@Url.Action("Edit", new { id = item.Id })" class="ui tiny button"><i class="edit icon"></i> @Texts.Pokemon_List_Edit</a>
+                        <a href="@Url.Action("Delete", new { id = item.Id })" class="ui tiny red button"><i class="trash icon"></i> @Texts.Pokemon_List_Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

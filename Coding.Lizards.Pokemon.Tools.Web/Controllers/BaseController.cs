@@ -18,26 +18,30 @@
             return View(vm);
         }
 
+        [Authorize]
         public virtual async Task<ActionResult> Add() {
             return View();
         }
 
+        [Authorize]
         [HttpPost]
         public virtual async Task<ActionResult> Add(TAddViewModel model) {
             var id = await model.Save();
-            return RedirectToAction("Details", ControllerContext.Controller.GetType().Name, new { id = id });
+            return RedirectToAction("Details", new { id = id });
         }
 
+        [Authorize]
         public virtual async Task<ActionResult> Edit(TModelId id) {
             var vm = new TEditViewModel();
             await vm.LoadData(id);
             return View(vm);
         }
 
+        [Authorize]
         [HttpPost]
         public virtual async Task<ActionResult> Edit(TEditViewModel model) {
             var id = await model.Save();
-            return RedirectToAction("Details", ControllerContext.Controller.GetType().Name, new { id = id });
+            return RedirectToAction("Details", new { id = id });
         }
 
         public virtual async Task<ActionResult> Details(TModelId id) {
@@ -46,16 +50,18 @@
             return View(vm);
         }
 
+        [Authorize]
         public virtual async Task<ActionResult> Delete(TModelId id) {
             var vm = new TDeleteViewModel();
             await vm.LoadData(id);
             return View(vm);
         }
 
+        [Authorize]
         [HttpPost]
         public virtual async Task<ActionResult> Delete(TDeleteViewModel model) {
             await model.Delete();
-            return RedirectToAction("Index", ControllerContext.Controller.GetType().Name);
+            return RedirectToAction("Index");
         }
     }
 }

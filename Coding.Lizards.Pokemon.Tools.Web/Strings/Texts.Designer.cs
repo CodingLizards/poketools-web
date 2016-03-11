@@ -403,6 +403,222 @@ namespace Coding.Lizards.Pokemon.Tools.Web.Strings {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Basiswerte ähnelt.
+        /// </summary>
+        public static string Pokemon_Add_BaseValues {
+            get {
+                return ResourceManager.GetString("Pokemon_Add_BaseValues", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Abbrechen ähnelt.
+        /// </summary>
+        public static string Pokemon_Add_Cancel {
+            get {
+                return ResourceManager.GetString("Pokemon_Add_Cancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Hinzufügen ähnelt.
+        /// </summary>
+        public static string Pokemon_Add_Submit {
+            get {
+                return ResourceManager.GetString("Pokemon_Add_Submit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Pokémon hinzufügen ähnelt.
+        /// </summary>
+        public static string Pokemon_Add_Title {
+            get {
+                return ResourceManager.GetString("Pokemon_Add_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Aktionen ähnelt.
+        /// </summary>
+        public static string Pokemon_List_Actions {
+            get {
+                return ResourceManager.GetString("Pokemon_List_Actions", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Pokémon hinzufügen ähnelt.
+        /// </summary>
+        public static string Pokemon_List_Add {
+            get {
+                return ResourceManager.GetString("Pokemon_List_Add", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Basis Attacke ähnelt.
+        /// </summary>
+        public static string Pokemon_List_BaseAttack {
+            get {
+                return ResourceManager.GetString("Pokemon_List_BaseAttack", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Basis Verteidigung ähnelt.
+        /// </summary>
+        public static string Pokemon_List_BaseDefense {
+            get {
+                return ResourceManager.GetString("Pokemon_List_BaseDefense", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Basiswert ähnelt.
+        /// </summary>
+        public static string Pokemon_List_BaseExperience {
+            get {
+                return ResourceManager.GetString("Pokemon_List_BaseExperience", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Basis Gesundheit ähnelt.
+        /// </summary>
+        public static string Pokemon_List_BaseHealth {
+            get {
+                return ResourceManager.GetString("Pokemon_List_BaseHealth", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Basis Spezialattacke ähnelt.
+        /// </summary>
+        public static string Pokemon_List_BaseSpecialAttack {
+            get {
+                return ResourceManager.GetString("Pokemon_List_BaseSpecialAttack", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Basis Spezialverteidigung ähnelt.
+        /// </summary>
+        public static string Pokemon_List_BaseSpecialDefense {
+            get {
+                return ResourceManager.GetString("Pokemon_List_BaseSpecialDefense", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Basis Geschwindigkeit ähnelt.
+        /// </summary>
+        public static string Pokemon_List_BaseSpeed {
+            get {
+                return ResourceManager.GetString("Pokemon_List_BaseSpeed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Pokémon löschen ähnelt.
+        /// </summary>
+        public static string Pokemon_List_Delete {
+            get {
+                return ResourceManager.GetString("Pokemon_List_Delete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Pokémon bearbeiten ähnelt.
+        /// </summary>
+        public static string Pokemon_List_Edit {
+            get {
+                return ResourceManager.GetString("Pokemon_List_Edit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Englischer Name ähnelt.
+        /// </summary>
+        public static string Pokemon_List_EnglishName {
+            get {
+                return ResourceManager.GetString("Pokemon_List_EnglishName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Erster Typ ähnelt.
+        /// </summary>
+        public static string Pokemon_List_FirstType {
+            get {
+                return ResourceManager.GetString("Pokemon_List_FirstType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Französicher Name ähnelt.
+        /// </summary>
+        public static string Pokemon_List_FrenchName {
+            get {
+                return ResourceManager.GetString("Pokemon_List_FrenchName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Deutscher Name ähnelt.
+        /// </summary>
+        public static string Pokemon_List_GermanName {
+            get {
+                return ResourceManager.GetString("Pokemon_List_GermanName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Name ähnelt.
+        /// </summary>
+        public static string Pokemon_List_Name {
+            get {
+                return ResourceManager.GetString("Pokemon_List_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Zweiter Typ ähnelt.
+        /// </summary>
+        public static string Pokemon_List_SecondType {
+            get {
+                return ResourceManager.GetString("Pokemon_List_SecondType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Sprite ähnelt.
+        /// </summary>
+        public static string Pokemon_List_Sprite {
+            get {
+                return ResourceManager.GetString("Pokemon_List_Sprite", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Icon ähnelt.
+        /// </summary>
+        public static string Pokemon_List_Thumbnail {
+            get {
+                return ResourceManager.GetString("Pokemon_List_Thumbnail", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Pokémon ähnelt.
+        /// </summary>
+        public static string Pokemon_List_Title {
+            get {
+                return ResourceManager.GetString("Pokemon_List_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Abbrechen ähnelt.
         /// </summary>
         public static string User_Add_Cancel {
