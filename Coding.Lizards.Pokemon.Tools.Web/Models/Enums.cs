@@ -3,6 +3,27 @@
     using Strings;
     using System.ComponentModel.DataAnnotations;
 
+    public enum ExperienceType {
+
+        [Display(ResourceType = typeof(Texts), Name = "Enums_XpType_Fast")]
+        Fast = 0,
+
+        [Display(ResourceType = typeof(Texts), Name = "Enums_XpType_MediumFast")]
+        MediumFast = 1,
+
+        [Display(ResourceType = typeof(Texts), Name = "Enums_XpType_MediumSlow")]
+        MediumSlow,
+
+        [Display(ResourceType = typeof(Texts), Name = "Enums_XpType_Slow")]
+        Slow,
+
+        [Display(ResourceType = typeof(Texts), Name = "Enums_XpType_Erratic")]
+        Erratic,
+
+        [Display(ResourceType = typeof(Texts), Name = "Enums_XpType_Fluctuating")]
+        Fluctuating
+    }
+
     public enum Type {
 
         [Display(ResourceType = typeof(Texts), Name = "Enums_Type_Normal")]

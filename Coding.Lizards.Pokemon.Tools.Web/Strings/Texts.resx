@@ -201,6 +201,24 @@
   <data name="Enums_Type_Water" xml:space="preserve">
     <value>Wasser</value>
   </data>
+  <data name="Enums_XpType_Erratic" xml:space="preserve">
+    <value>Erratic</value>
+  </data>
+  <data name="Enums_XpType_Fast" xml:space="preserve">
+    <value>Schnell</value>
+  </data>
+  <data name="Enums_XpType_Fluctuating" xml:space="preserve">
+    <value>Fluctuating</value>
+  </data>
+  <data name="Enums_XpType_MediumFast" xml:space="preserve">
+    <value>Mittel-Schnell</value>
+  </data>
+  <data name="Enums_XpType_MediumSlow" xml:space="preserve">
+    <value>Mittel-Langsam</value>
+  </data>
+  <data name="Enums_XpType_Slow" xml:space="preserve">
+    <value>Langsam</value>
+  </data>
   <data name="Or" xml:space="preserve">
     <value>Oder</value>
   </data>
@@ -216,6 +234,42 @@
   <data name="Pokemon_Add_Title" xml:space="preserve">
     <value>Pokémon hinzufügen</value>
   </data>
+  <data name="Pokemon_Delete_Cancel" xml:space="preserve">
+    <value>Abbrechen</value>
+  </data>
+  <data name="Pokemon_Delete_Content" xml:space="preserve">
+    <value>Soll das Pokémon {0} wirklich gelöscht werden?</value>
+  </data>
+  <data name="Pokemon_Delete_Submit" xml:space="preserve">
+    <value>Löschen</value>
+  </data>
+  <data name="Pokemon_Delete_Title" xml:space="preserve">
+    <value>Pokémon löschen</value>
+  </data>
+  <data name="Pokemon_Details_BaseValues" xml:space="preserve">
+    <value>Basiswerte</value>
+  </data>
+  <data name="Pokemon_Details_Delete" xml:space="preserve">
+    <value>Pokémon löschen</value>
+  </data>
+  <data name="Pokemon_Details_Edit" xml:space="preserve">
+    <value>Pokémon bearbeiten</value>
+  </data>
+  <data name="Pokemon_Details_Title" xml:space="preserve">
+    <value>Details</value>
+  </data>
+  <data name="Pokemon_Edit_BaseValues" xml:space="preserve">
+    <value>Basiswerte</value>
+  </data>
+  <data name="Pokemon_Edit_Cancel" xml:space="preserve">
+    <value>Abbrechen</value>
+  </data>
+  <data name="Pokemon_Edit_Submit" xml:space="preserve">
+    <value>Speichern</value>
+  </data>
+  <data name="Pokemon_Edit_Title" xml:space="preserve">
+    <value>Pokémon bearbeiten</value>
+  </data>
   <data name="Pokemon_List_Actions" xml:space="preserve">
     <value>Aktionen</value>
   </data>
@@ -223,7 +277,7 @@
     <value>Pokémon hinzufügen</value>
   </data>
   <data name="Pokemon_List_BaseAttack" xml:space="preserve">
-    <value>Basis Attacke</value>
+    <value>Basis Angriff</value>
   </data>
   <data name="Pokemon_List_BaseDefense" xml:space="preserve">
     <value>Basis Verteidigung</value>
@@ -235,7 +289,7 @@
     <value>Basis Gesundheit</value>
   </data>
   <data name="Pokemon_List_BaseSpecialAttack" xml:space="preserve">
-    <value>Basis Spezialattacke</value>
+    <value>Basis Spezialangriff</value>
   </data>
   <data name="Pokemon_List_BaseSpecialDefense" xml:space="preserve">
     <value>Basis Spezialverteidigung</value>
@@ -251,6 +305,9 @@
   </data>
   <data name="Pokemon_List_EnglishName" xml:space="preserve">
     <value>Englischer Name</value>
+  </data>
+  <data name="Pokemon_List_ExperienceType" xml:space="preserve">
+    <value>Erfahrungstyp</value>
   </data>
   <data name="Pokemon_List_FirstType" xml:space="preserve">
     <value>Erster Typ</value>

@@ -40,13 +40,16 @@ namespace Coding.Lizards.Pokemon.Tools.Web.Models {
         public int BaseSpeed { get; set; }
 
         [Display(ResourceType = typeof(Texts), Name = "Pokemon_List_BaseExperience")]
-        public int BaseExprience { get; set; }
+        public int BaseExperience { get; set; }
 
         [Display(ResourceType = typeof(Texts), Name = "Pokemon_List_Thumbnail")]
         public byte[] Thumbnail { get; set; }
 
         [Display(ResourceType = typeof(Texts), Name = "Pokemon_List_Sprite")]
         public byte[] Sprite { get; set; }
+
+        [Display(ResourceType = typeof(Texts), Name = "Pokemon_List_ExperienceType")]
+        public ExperienceType ExperienceType { get; set; }
 
         public string GetLocalizedName() {
             var uiculture = Thread.CurrentThread.CurrentUICulture;

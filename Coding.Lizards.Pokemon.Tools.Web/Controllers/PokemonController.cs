@@ -7,6 +7,7 @@
     using System.Drawing;
     using System.Drawing.Imaging;
     using System.IO;
+    using System.Linq;
     using System.Threading.Tasks;
     using System.Web.Mvc;
 
@@ -42,6 +43,28 @@
             }
 
             return await base.Add(model);
+        }
+
+        public override async Task<ActionResult> Edit(EditPokemonViewModel model) {
+            if (Request.Files.Get("Thumbnail").ContentLength > 0) {
+                var thumbnail = Image.FromStream(Request.Files["Thumbnail"].InputStream);
+                using (var ms = new MemoryStream()) {
+                    thumbnail.Save(ms, ImageFormat.Gif);
+                    ms.Position = 0;
+                    model.Item.Thumbnail = ms.ToArray();
+                }
+            }
+
+            if (Request.Files.Get("Sprite").ContentLength > 0) {
+                var sprite = Image.FromStream(Request.Files["Sprite"].InputStream);
+                using (var ms = new MemoryStream()) {
+                    sprite.Save(ms, ImageFormat.Gif);
+                    ms.Position = 0;
+                    model.Item.Sprite = ms.ToArray();
+                }
+            }
+
+            return await base.Edit(model);
         }
     }
 }

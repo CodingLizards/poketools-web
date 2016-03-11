@@ -394,6 +394,60 @@ namespace Coding.Lizards.Pokemon.Tools.Web.Strings {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Erratic ähnelt.
+        /// </summary>
+        public static string Enums_XpType_Erratic {
+            get {
+                return ResourceManager.GetString("Enums_XpType_Erratic", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Schnell ähnelt.
+        /// </summary>
+        public static string Enums_XpType_Fast {
+            get {
+                return ResourceManager.GetString("Enums_XpType_Fast", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Fluctuating ähnelt.
+        /// </summary>
+        public static string Enums_XpType_Fluctuating {
+            get {
+                return ResourceManager.GetString("Enums_XpType_Fluctuating", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Mittel-Schnell ähnelt.
+        /// </summary>
+        public static string Enums_XpType_MediumFast {
+            get {
+                return ResourceManager.GetString("Enums_XpType_MediumFast", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Mittel-Langsam ähnelt.
+        /// </summary>
+        public static string Enums_XpType_MediumSlow {
+            get {
+                return ResourceManager.GetString("Enums_XpType_MediumSlow", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Langsam ähnelt.
+        /// </summary>
+        public static string Enums_XpType_Slow {
+            get {
+                return ResourceManager.GetString("Enums_XpType_Slow", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Oder ähnelt.
         /// </summary>
         public static string Or {
@@ -439,6 +493,114 @@ namespace Coding.Lizards.Pokemon.Tools.Web.Strings {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Abbrechen ähnelt.
+        /// </summary>
+        public static string Pokemon_Delete_Cancel {
+            get {
+                return ResourceManager.GetString("Pokemon_Delete_Cancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Soll das Pokémon {0} wirklich gelöscht werden? ähnelt.
+        /// </summary>
+        public static string Pokemon_Delete_Content {
+            get {
+                return ResourceManager.GetString("Pokemon_Delete_Content", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Löschen ähnelt.
+        /// </summary>
+        public static string Pokemon_Delete_Submit {
+            get {
+                return ResourceManager.GetString("Pokemon_Delete_Submit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Pokémon löschen ähnelt.
+        /// </summary>
+        public static string Pokemon_Delete_Title {
+            get {
+                return ResourceManager.GetString("Pokemon_Delete_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Basiswerte ähnelt.
+        /// </summary>
+        public static string Pokemon_Details_BaseValues {
+            get {
+                return ResourceManager.GetString("Pokemon_Details_BaseValues", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Pokémon löschen ähnelt.
+        /// </summary>
+        public static string Pokemon_Details_Delete {
+            get {
+                return ResourceManager.GetString("Pokemon_Details_Delete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Pokémon bearbeiten ähnelt.
+        /// </summary>
+        public static string Pokemon_Details_Edit {
+            get {
+                return ResourceManager.GetString("Pokemon_Details_Edit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Details ähnelt.
+        /// </summary>
+        public static string Pokemon_Details_Title {
+            get {
+                return ResourceManager.GetString("Pokemon_Details_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Basiswerte ähnelt.
+        /// </summary>
+        public static string Pokemon_Edit_BaseValues {
+            get {
+                return ResourceManager.GetString("Pokemon_Edit_BaseValues", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Abbrechen ähnelt.
+        /// </summary>
+        public static string Pokemon_Edit_Cancel {
+            get {
+                return ResourceManager.GetString("Pokemon_Edit_Cancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Speichern ähnelt.
+        /// </summary>
+        public static string Pokemon_Edit_Submit {
+            get {
+                return ResourceManager.GetString("Pokemon_Edit_Submit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Pokémon bearbeiten ähnelt.
+        /// </summary>
+        public static string Pokemon_Edit_Title {
+            get {
+                return ResourceManager.GetString("Pokemon_Edit_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Aktionen ähnelt.
         /// </summary>
         public static string Pokemon_List_Actions {
@@ -457,7 +619,7 @@ namespace Coding.Lizards.Pokemon.Tools.Web.Strings {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Basis Attacke ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Basis Angriff ähnelt.
         /// </summary>
         public static string Pokemon_List_BaseAttack {
             get {
@@ -493,7 +655,7 @@ namespace Coding.Lizards.Pokemon.Tools.Web.Strings {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Basis Spezialattacke ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Basis Spezialangriff ähnelt.
         /// </summary>
         public static string Pokemon_List_BaseSpecialAttack {
             get {
@@ -543,6 +705,15 @@ namespace Coding.Lizards.Pokemon.Tools.Web.Strings {
         public static string Pokemon_List_EnglishName {
             get {
                 return ResourceManager.GetString("Pokemon_List_EnglishName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Erfahrungstyp ähnelt.
+        /// </summary>
+        public static string Pokemon_List_ExperienceType {
+            get {
+                return ResourceManager.GetString("Pokemon_List_ExperienceType", resourceCulture);
             }
         }
         

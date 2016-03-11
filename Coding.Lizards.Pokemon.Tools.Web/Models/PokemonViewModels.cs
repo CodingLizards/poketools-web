@@ -25,7 +25,8 @@
 	                SpecialAttack,
 	                SpecialDefense,
 	                Speed,
-	                BaseXp
+	                BaseXp,
+                    XpType
                 ) VALUES (
 	                @id,
 	                @germanName,
@@ -41,7 +42,8 @@
 	                @specialAttack,
 	                @specialDefense,
 	                @speed,
-	                @baseXp
+	                @baseXp,
+                    @xpType
                 )", new {
                     germanName = Item.GermanName,
                     englishName = Item.EnglishName,
@@ -56,7 +58,8 @@
                     specialAttack = Item.BaseSpecialAttack,
                     specialDefense = Item.BaseSpecialDefense,
                     speed = Item.BaseSpeed,
-                    baseXp = Item.BaseExprience,
+                    baseXp = Item.BaseExperience,
+                    xpType = Item.ExperienceType,
                     id = Item.Id
                 });
                 if (affectedRows < 1) {
@@ -71,7 +74,7 @@
 
         public override async Task LoadData(int id) {
             using (var sqlconnection = new SqlConnection(ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString)) {
-                var items = await sqlconnection.QueryAsync<PokemonModel>("SELECT [NationalDexId] AS Id, [GermanName], [EnglishName], [Frenchname], [Thumbnail], [Sprite], [FirstType], [SecondType], [BaseHP], [BaseAttack], [BaseDefense], [SpecialAttack], [SpecialDefense], [Speed], [BaseXp]  WHERE NationalDexId = @id", new { id = id });
+                var items = await sqlconnection.QueryAsync<PokemonModel>("SELECT [NationalDexId] AS Id, [GermanName], [EnglishName], [Frenchname], [Thumbnail], [Sprite], [FirstType], [SecondType], [XpType] AS ExperienceType, [BaseHP] AS BaseHealth, [BaseAttack], [BaseDefense], [SpecialAttack] AS BaseSpecialAttack, [SpecialDefense] AS BaseSpecialDefense, [Speed] AS BaseSpeed, [BaseXp] AS BaseExperience FROM [dbo].[Pokemon] WHERE NationalDexId = @id", new { id = id });
                 this.Item = items.First();
             }
         }
@@ -82,8 +85,6 @@
 [GermanName] = @germanName,
 [EnglishName] = @englishName,
 [Frenchname] = @frenchName,
-[Thumbnail] = @thumbnail,
-[Sprite] = @sprite,
 [FirstType] = @firstType,
 [SecondType] = @secondType,
 [BaseHP] = @baseHp,
@@ -92,13 +93,12 @@
 [SpecialAttack] = @specialAttack,
 [SpecialDefense]= @specialDefense,
 [Speed] = @speed,
-[BaseXp] = @baseXp
+[BaseXp] = @baseXp,
+[XpType] = @xpType
 WHERE NationalDexId = @id", new {
                     germanName = Item.GermanName,
                     englishName = Item.EnglishName,
                     frenchName = Item.FrenchName,
-                    thumbnail = Item.Thumbnail,
-                    sprite = Item.Sprite,
                     firstType = Item.FirstType,
                     secondType = Item.SecondType,
                     baseHp = Item.BaseHealth,
@@ -107,9 +107,16 @@ WHERE NationalDexId = @id", new {
                     specialAttack = Item.BaseSpecialAttack,
                     specialDefense = Item.BaseSpecialDefense,
                     speed = Item.BaseSpeed,
-                    baseXp = Item.BaseExprience,
+                    baseXp = Item.BaseExperience,
+                    xpType = Item.ExperienceType,
                     id = Item.Id
                 });
+                if (Item.Thumbnail != null && Item.Thumbnail.Any()) {
+                    await sqlconnection.ExecuteAsync(@"UPDATE Pokemon SET [Thumbnail] = @thumbnail", new { thumbnail = Item.Thumbnail });
+                }
+                if (Item.Sprite != null && Item.Sprite.Any()) {
+                    await sqlconnection.ExecuteAsync(@"UPDATE Pokemon SET [Sprite] = @sprite", new { sprite = Item.Sprite });
+                }
                 return Item.Id;
             }
         }
@@ -118,7 +125,7 @@ WHERE NationalDexId = @id", new {
     public class DetailsPokemonViewModel : BaseDetailsViewModel<PokemonModel, int> {
         public override async Task LoadData(int id) {
             using (var sqlconnection = new SqlConnection(ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString)) {
-                var items = await sqlconnection.QueryAsync<PokemonModel>("SELECT [NationalDexId] AS Id, [GermanName], [EnglishName], [Frenchname], [Thumbnail], [Sprite], [FirstType], [SecondType], [BaseHP], [BaseAttack], [BaseDefense], [SpecialAttack], [SpecialDefense], [Speed], [BaseXp] FROM [dbo].[Pokemon] WHERE NationalDexId = @id", new { id = id });
+                var items = await sqlconnection.QueryAsync<PokemonModel>("SELECT [NationalDexId] AS Id, [GermanName], [EnglishName], [Frenchname], [Thumbnail], [Sprite], [FirstType], [SecondType], [XpType] AS ExperienceType, [BaseHP] AS BaseHealth, [BaseAttack], [BaseDefense], [SpecialAttack] AS BaseSpecialAttack, [SpecialDefense] AS BaseSpecialDefense, [Speed] AS BaseSpeed, [BaseXp] AS BaseExperience FROM [dbo].[Pokemon] WHERE NationalDexId = @id", new { id = id });
                 this.Item = items.First();
             }
         }
@@ -147,7 +154,7 @@ WHERE NationalDexId = @id", new {
     public class ListPokemonViewModel : BaseListViewModel<PokemonModel, int> {
         public override async Task LoadData() {
             using (var sqlconnection = new SqlConnection(ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString)) {
-                this.Items = await sqlconnection.QueryAsync<PokemonModel>("SELECT [NationalDexId] AS Id, [GermanName], [EnglishName], [Frenchname], [Thumbnail], [Sprite], [FirstType], [SecondType], [BaseHP], [BaseAttack], [BaseDefense], [SpecialAttack], [SpecialDefense], [Speed], [BaseXp] FROM [dbo].[Pokemon]");
+                this.Items = await sqlconnection.QueryAsync<PokemonModel>("SELECT [NationalDexId] AS Id, [GermanName], [EnglishName], [Frenchname], [Thumbnail], [Sprite], [FirstType], [SecondType], [XpType] AS ExperienceType, [BaseHP] AS BaseHealth, [BaseAttack], [BaseDefense], [SpecialAttack] AS BaseSpecialAttack, [SpecialDefense] AS BaseSpecialDefense, [Speed] AS BaseSpeed, [BaseXp] AS BaseExperience FROM [dbo].[Pokemon]");
             }
         }
     }

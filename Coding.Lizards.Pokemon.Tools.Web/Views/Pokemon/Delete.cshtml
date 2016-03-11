@@ -1,0 +1,26 @@
+﻿@model DeletePokemonViewModel
+@{
+    ViewBag.Title = Texts.Pokemon_Delete_Title;
+}
+
+<div class="ui middle aligned center aligned grid">
+    @using (Html.BeginForm("Delete", "Pokemon", FormMethod.Post, new { @class = "ui compact segment" })) {
+        @Html.HiddenFor(m => m.Item.Id)
+        <div class="ui secondary pointing menu">
+            <div class="header item">@ViewBag.Title</div>
+        </div>
+        <div class="content">
+            @string.Format(Texts.Pokemon_Delete_Content, Model.Item.GetLocalizedName())
+        </div>
+        <div class="ui right floated buttons">
+            <a href="/Pokemon" class="ui button">@Texts.Pokemon_Delete_Cancel</a>
+            <div class="or" data-text="@Texts.Or"></div>
+            <button type="submit" class="ui animated submit primary button">
+                <div class="visible content">@Texts.Pokemon_Delete_Submit</div>
+                <div class="hidden content">
+                    <i class="right save icon"></i>
+                </div>
+            </button>
+        </div>
+    }
+</div>
