@@ -303,6 +303,36 @@
   <data name="Enums_XpType_Slow" xml:space="preserve">
     <value>Langsam (max. 1.250.000 EP)</value>
   </data>
+  <data name="Home_Index_Fight" xml:space="preserve">
+    <value>Kampf</value>
+  </data>
+  <data name="Home_Index_Level" xml:space="preserve">
+    <value>Level</value>
+  </data>
+  <data name="Home_Index_MyPokemon" xml:space="preserve">
+    <value>Mein Pokémon</value>
+  </data>
+  <data name="Home_Index_OpponentPokemon" xml:space="preserve">
+    <value>Gegnerisches Pokémon</value>
+  </data>
+  <data name="Home_Index_Pokemon" xml:space="preserve">
+    <value>Pokémon</value>
+  </data>
+  <data name="Home_Index_SearchAttack" xml:space="preserve">
+    <value>Attacke suchen</value>
+  </data>
+  <data name="Home_Index_SearchPokemon" xml:space="preserve">
+    <value>Pokémon suchen</value>
+  </data>
+  <data name="Home_Index_Title" xml:space="preserve">
+    <value>Startseite</value>
+  </data>
+  <data name="Home_Index_UsedAttack" xml:space="preserve">
+    <value>Eingesetzte Attacke</value>
+  </data>
+  <data name="Home_Index_XpCalc" xml:space="preserve">
+    <value>Erfahrung</value>
+  </data>
   <data name="Or" xml:space="preserve">
     <value>Oder</value>
   </data>

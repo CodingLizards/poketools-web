@@ -700,6 +700,96 @@ namespace Coding.Lizards.Pokemon.Tools.Web.Strings {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Kampf ähnelt.
+        /// </summary>
+        public static string Home_Index_Fight {
+            get {
+                return ResourceManager.GetString("Home_Index_Fight", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Level ähnelt.
+        /// </summary>
+        public static string Home_Index_Level {
+            get {
+                return ResourceManager.GetString("Home_Index_Level", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Mein Pokémon ähnelt.
+        /// </summary>
+        public static string Home_Index_MyPokemon {
+            get {
+                return ResourceManager.GetString("Home_Index_MyPokemon", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Gegnerisches Pokémon ähnelt.
+        /// </summary>
+        public static string Home_Index_OpponentPokemon {
+            get {
+                return ResourceManager.GetString("Home_Index_OpponentPokemon", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Pokémon ähnelt.
+        /// </summary>
+        public static string Home_Index_Pokemon {
+            get {
+                return ResourceManager.GetString("Home_Index_Pokemon", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Attacke suchen ähnelt.
+        /// </summary>
+        public static string Home_Index_SearchAttack {
+            get {
+                return ResourceManager.GetString("Home_Index_SearchAttack", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Pokémon suchen ähnelt.
+        /// </summary>
+        public static string Home_Index_SearchPokemon {
+            get {
+                return ResourceManager.GetString("Home_Index_SearchPokemon", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Startseite ähnelt.
+        /// </summary>
+        public static string Home_Index_Title {
+            get {
+                return ResourceManager.GetString("Home_Index_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Eingesetzte Attacke ähnelt.
+        /// </summary>
+        public static string Home_Index_UsedAttack {
+            get {
+                return ResourceManager.GetString("Home_Index_UsedAttack", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Erfahrung ähnelt.
+        /// </summary>
+        public static string Home_Index_XpCalc {
+            get {
+                return ResourceManager.GetString("Home_Index_XpCalc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Oder ähnelt.
         /// </summary>
         public static string Or {

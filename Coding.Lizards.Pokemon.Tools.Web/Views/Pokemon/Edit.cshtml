@@ -30,15 +30,15 @@
             <div class="two fields">
                 <div class="field">
                     @Html.LabelFor(m => m.Item.FirstType)
-                    @Html.EnumDropDownListFor(m => m.Item.FirstType)
+                    @Html.EnumDropDownListFor(m => m.Item.FirstType, new { @class = "ui search dropdown" })
                 </div>
                 <div class="field">
                     @Html.LabelFor(m => m.Item.SecondType)
-                    @Html.EnumDropDownListFor(m => m.Item.SecondType)
+                    @Html.EnumDropDownListFor(m => m.Item.SecondType, new { @class = "ui search dropdown" })
                 </div>
                 <div class="field">
                     @Html.LabelFor(m => m.Item.ExperienceType)
-                    @Html.EnumDropDownListFor(m => m.Item.ExperienceType)
+                    @Html.EnumDropDownListFor(m => m.Item.ExperienceType, new { @class = "ui search dropdown" })
                 </div>
             </div>
             <div class="two fields">

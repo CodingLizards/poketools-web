@@ -38,7 +38,7 @@
                 </div>
                 <div class="field">
                     @Html.LabelFor(m => m.Item.Type)
-                    @Html.EnumDropDownListFor(m => m.Item.Type)
+                    @Html.EnumDropDownListFor(m => m.Item.Type, new { @class = "ui search dropdown" })
                 </div>
             </div>
             <div class="ui right floated buttons">

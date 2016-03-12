@@ -1,25 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿namespace Coding.Lizards.Pokemon.Tools.Web.Controllers {
 
-namespace Coding.Lizards.Pokemon.Tools.Web.Controllers {
+    using Coding.Lizards.Pokemon.Tools.Web.Models;
+    using System.Threading.Tasks;
+    using System.Web.Mvc;
+
     public class HomeController : Controller {
-        public ActionResult Index() {
-            return View();
-        }
 
-        public ActionResult About() {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
-        }
-
-        public ActionResult Contact() {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
+        public async Task<ActionResult> Index() {
+            var vm = new HomePageViewModel();
+            await vm.LoadData();
+            return View(vm);
         }
     }
 }

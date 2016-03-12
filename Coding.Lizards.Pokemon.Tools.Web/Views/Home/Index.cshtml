@@ -1,59 +1,85 @@
-﻿@{
-    ViewBag.Title = "Home Page";
+﻿@model HomePageViewModel
+@{
+    ViewBag.Title = Texts.Home_Index_Title;
 }
-<div class="ui stacked segment">
-    <h1>HTML Ipsum Presents</h1>
-
-    <p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>
-
-    <h2>Header Level 2</h2>
-
-    <ol>
-        <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-        <li>Aliquam tincidunt mauris eu risus.</li>
-    </ol>
-
-    <blockquote><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.</p></blockquote>
-
-    <h3>Header Level 3</h3>
-
-    <ul>
-        <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-        <li>Aliquam tincidunt mauris eu risus.</li>
-    </ul>
-
-<pre><code>
-#header h1 a { 
-	display: block; 
-	width: 300px; 
-	height: 80px; 
-}
-</code></pre>
-    <h1>HTML Ipsum Presents</h1>
-
-    <p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>
-
-    <h2>Header Level 2</h2>
-
-    <ol>
-        <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-        <li>Aliquam tincidunt mauris eu risus.</li>
-    </ol>
-
-    <blockquote><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.</p></blockquote>
-
-    <h3>Header Level 3</h3>
-
-    <ul>
-        <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-        <li>Aliquam tincidunt mauris eu risus.</li>
-    </ul>
-
-<pre><code>
-#header h1 a { 
-	display: block; 
-	width: 300px; 
-	height: 80px; 
-}
-</code></pre>
+<div class="ui middle aligned center aligned grid">
+    <div class="ui twelve wide left aligned column stacked segment">
+        <div class="ui secondary pointing menu">
+            <div class="header item">@ViewBag.Title</div>
+            <div class="right menu">
+                <a data-tab="fighting" class="active item">@Texts.Home_Index_Fight</a>
+                <a data-tab="xpcalc" class="item">@Texts.Home_Index_XpCalc</a>
+            </div>
+        </div>
+        <div data-tab="fighting" class="ui active basic tab segment">
+            <div class="ui grid form">
+                <div class="ui eight wide column">
+                    <h4 class="ui dividing header">@Texts.Home_Index_MyPokemon</h4>
+                    <div class="inline field">
+                        <label>@Texts.Home_Index_Level</label>
+                        @Html.DropDownList("fight_mypokemon_level", new SelectList(Enumerable.Range(1, 100)), new { @class = "ui compact search dropdown" })
+                        <label>@Texts.Home_Index_Pokemon</label>
+                        <div class="ui search selection dropdown">
+                            <div class="default text">@Texts.Home_Index_SearchPokemon</div>
+                            <i class="dropdown icon"></i>
+                            <div class="menu">
+                                @foreach (var item in Model.Pokemon) {
+                                    <div data-value="@item.Id" class="item">
+                                        <img src="@Url.Action("GetThumbnail", "Pokemon", new { id = item.Id })" alt="" />
+                                        @item.GetLocalizedName()
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui eight wide column">
+                    <h4 class="ui dividing header">@Texts.Home_Index_OpponentPokemon</h4>
+                    <div class="inline field">
+                        <label>@Texts.Home_Index_Level</label>
+                        @Html.DropDownList("fight_mypokemon_level", new SelectList(Enumerable.Range(1, 100)), new { @class = "ui compact search dropdown" })
+                        <label>@Texts.Home_Index_Pokemon</label>
+                        <div class="ui search selection dropdown">
+                            <div class="default text">@Texts.Home_Index_SearchPokemon</div>
+                            <i class="dropdown icon"></i>
+                            <div class="menu">
+                                @foreach (var item in Model.Pokemon) {
+                                    <div data-value="@item.Id" class="item">
+                                        <img src="@Url.Action("GetThumbnail", "Pokemon", new { id = item.Id })" alt="" />
+                                        @item.GetLocalizedName()
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui sixteen wide column">
+                    <h4 class="ui dividing header">@Texts.Home_Index_UsedAttack</h4>
+                    <div class="ui fluid search selection dropdown">
+                        <div class="default text">@Texts.Home_Index_SearchAttack</div>
+                        <i class="dropdown icon"></i>
+                        <div class="menu">
+                            @foreach (var item in Model.Attacks) {
+                                <div class="item">
+                                    @item.GetLocalizedName()
+                                    (@item.Type.DisplayName() &mdash; @Texts.Attack_List_Strength: @item.Strength)
+                                </div>
+                            }
+                        </div>
+                    </div>
+                    <button class="ui primary button" type="button">@Texts.Home_Index_Fight</button>
+                </div>
+            </div>
+        </div>
+        <div data-tab="xpcalc" class="ui basic tab segment">XP Calc</div>
+    </div>
 </div>
+
+@section scripts {
+    <script>
+        $(function () {
+            $('.menu .item').tab();
+            $('select, .ui.dropdown').dropdown();
+        });
+    </script>
+}
