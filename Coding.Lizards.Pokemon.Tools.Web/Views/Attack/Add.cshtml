@@ -27,7 +27,7 @@
                     @Html.TextBoxFor(m => m.Item.FrenchName)
                 </div>
             </div>
-            <div class="three fields">
+            <div class="four fields">
                 <div class="field">
                     @Html.LabelFor(m => m.Item.Accuracy)
                     @Html.TextBoxFor(m => m.Item.Accuracy)
@@ -35,6 +35,10 @@
                 <div class="field">
                     @Html.LabelFor(m => m.Item.Strength)
                     @Html.TextBoxFor(m => m.Item.Strength)
+                </div>
+                <div class="field">
+                    @Html.LabelFor(m => m.Item.DamageClass)
+                    @Html.EnumDropDownListFor(m => m.Item.DamageClass, new { @class = "ui search dropdown" })
                 </div>
                 <div class="field">
                     @Html.LabelFor(m => m.Item.Type)

@@ -18,6 +18,7 @@
                 <th>@Texts.Attack_List_Type</th>
                 <th>@Texts.Attack_List_Accuracy</th>
                 <th>@Texts.Attack_List_Strength</th>
+                <th>@Texts.Attack_List_DamageClass</th>
                 <th>@Texts.Attack_List_Actions</th>
             </tr>
         </thead>
@@ -31,6 +32,7 @@
                     <td>@item.Type.DisplayName()</td>
                     <td>@item.Accuracy</td>
                     <td>@item.Strength</td>
+                    <td>@item.DamageClass</td>
                     <td>
                         <div class="ui buttons">
                             <a href="@Url.Action("Edit", new { id = item.Id })" class="ui tiny button"><i class="edit icon"></i> @Texts.Attack_List_Edit</a>

@@ -18,6 +18,9 @@
         [Display(ResourceType = typeof(Texts), Name = "Attack_List_Type")]
         public Type Type { get; set; }
 
+        [Display(ResourceType = typeof(Texts), Name = "Attack_List_DamageClass")]
+        public DamageClass DamageClass { get; set; }
+
         [Display(ResourceType = typeof(Texts), Name = "Attack_List_Strength")]
         public int Strength { get; set; }
 

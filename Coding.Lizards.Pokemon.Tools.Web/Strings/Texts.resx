@@ -195,6 +195,9 @@
   <data name="Attack_List_Add" xml:space="preserve">
     <value>Attacke hinzufügen</value>
   </data>
+  <data name="Attack_List_DamageClass" xml:space="preserve">
+    <value>Schadensklasse</value>
+  </data>
   <data name="Attack_List_Delete" xml:space="preserve">
     <value>Attacke löschen</value>
   </data>

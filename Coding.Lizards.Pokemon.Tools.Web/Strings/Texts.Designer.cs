@@ -376,6 +376,15 @@ namespace Coding.Lizards.Pokemon.Tools.Web.Strings {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Schadensklasse ähnelt.
+        /// </summary>
+        public static string Attack_List_DamageClass {
+            get {
+                return ResourceManager.GetString("Attack_List_DamageClass", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Attacke löschen ähnelt.
         /// </summary>
         public static string Attack_List_Delete {

@@ -11,5 +11,17 @@
             await vm.LoadData();
             return View(vm);
         }
+
+        public async Task<ActionResult> Attack(int id) {
+            var attack = new DetailsAttackViewModel();
+            await attack.LoadData(id);
+            return Json(attack.Item);
+        }
+
+        public async Task<ActionResult> Pokemon(int id) {
+            var pokemon = new DetailsPokemonViewModel();
+            await pokemon.LoadData(id);
+            return Json(pokemon.Item);
+        }
     }
 }

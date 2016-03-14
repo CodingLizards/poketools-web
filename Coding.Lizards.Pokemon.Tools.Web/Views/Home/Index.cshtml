@@ -17,9 +17,9 @@
                     <h4 class="ui dividing header">@Texts.Home_Index_MyPokemon</h4>
                     <div class="inline field">
                         <label>@Texts.Home_Index_Level</label>
-                        @Html.DropDownList("fight_mypokemon_level", new SelectList(Enumerable.Range(1, 100)), new { @class = "ui compact search dropdown" })
+                        @Html.DropDownList("fight_attackingpokemon_level", new SelectList(Enumerable.Range(1, 100)), new { @class = "ui compact search dropdown" })
                         <label>@Texts.Home_Index_Pokemon</label>
-                        <div class="ui search selection dropdown">
+                        <div id="attackingpokemon" class="ui search selection dropdown">
                             <div class="default text">@Texts.Home_Index_SearchPokemon</div>
                             <i class="dropdown icon"></i>
                             <div class="menu">
@@ -37,9 +37,9 @@
                     <h4 class="ui dividing header">@Texts.Home_Index_OpponentPokemon</h4>
                     <div class="inline field">
                         <label>@Texts.Home_Index_Level</label>
-                        @Html.DropDownList("fight_mypokemon_level", new SelectList(Enumerable.Range(1, 100)), new { @class = "ui compact search dropdown" })
+                        @Html.DropDownList("fight_defendingpokemon_level", new SelectList(Enumerable.Range(1, 100)), new { @class = "ui compact search dropdown" })
                         <label>@Texts.Home_Index_Pokemon</label>
-                        <div class="ui search selection dropdown">
+                        <div id="defendingpokemon" class="ui search selection dropdown">
                             <div class="default text">@Texts.Home_Index_SearchPokemon</div>
                             <i class="dropdown icon"></i>
                             <div class="menu">
@@ -55,12 +55,12 @@
                 </div>
                 <div class="ui sixteen wide column">
                     <h4 class="ui dividing header">@Texts.Home_Index_UsedAttack</h4>
-                    <div class="ui fluid search selection dropdown">
+                    <div id="usedattack" class="ui fluid search selection dropdown">
                         <div class="default text">@Texts.Home_Index_SearchAttack</div>
                         <i class="dropdown icon"></i>
                         <div class="menu">
                             @foreach (var item in Model.Attacks) {
-                                <div class="item">
+                                <div data-value="@item.Id" class="item">
                                     @item.GetLocalizedName()
                                     (@item.Type.DisplayName() &mdash; @Texts.Attack_List_Strength: @item.Strength)
                                 </div>
@@ -80,6 +80,64 @@
         $(function () {
             $('.menu .item').tab();
             $('select, .ui.dropdown').dropdown();
+
+            var recalculateAttack = function () {
+                var calculateHp = function (base, dv, fp, level) {
+                    return Math.floor((2 * base + dv + (fp / 4) + 100) * (level / 100) + 10);
+                };
+                var calculateOther = function (base, dv, fp, level) {
+                    return Math.floor(((2 * base + dv + (fp / 4)) * (level / 100) + 5) * 1);
+                };
+
+                var attackingPokemon = undefined;
+                var defendingPokemon = undefined;
+                var usedAttack = undefined;
+                $.getJSON('/attack/' + $('#usedattack').dropdown('get value')).then(function (attack) {
+                    usedAttack = attack;
+                    return $.getJSON('/pokemon/' + $('#attackingpokemon').dropdown('get value'));
+                }).then(function (pokemon) {
+                    attackingPokemon = pokemon;
+                    return $.getJSON('/pokemon/' + $('#defendingpokemon').dropdown('get value'));
+                }).then(function (pokemon) {
+                    defendingPokemon = pokemon;
+                    var calcDamage = function (z, dv, fp) {
+                        var baseStrength = usedAttack.Strength;
+                        var basedamage = baseStrength;
+                        var attackingLevel = $('#fight_attackingpokemon_level').val();
+                        var defendingLevel = $('#fight_defendingpokemon_level').val();
+
+                        var attack = 0;
+                        var defense = 0;
+                        if (usedAttack.DamageClass == 0) {
+                            attack = calculateOther(attackingPokemon.BaseAttack, dv, fp, attackingLevel);
+                            defense = calculateOther(defendingPokemon.BaseDefense, dv, fp, defendingLevel);
+                        } else if (usedAttack.DamageClass == 1) {
+                            attack = calculateOther(attackingPokemon.BaseSpecialAttack, dv, fp, attackingLevel);
+                            defense = calculateOther(defendingPokemon.BaseSpecialDefense, dv, fp, defendingLevel);
+                        } else {
+                            return 0;
+                        }
+
+                        var directhit = 1;
+
+                        var f1 = 1;
+                        var f2 = 1;
+                        var f3 = 1;
+
+                        var stab = 0;
+                        if (usedAttack.Type == attackingPokemon.FirstType || usedAttack.Type == attackingPokemon.SecondType) {
+                            stab = 1.5;
+                        }
+
+                        var type1 = 0;
+                        var type2 = 0;
+
+                        return ((level * (2 / 5) + 2) * basedamage * (attack / (50 * defense)) * f1 + 2) * directhit * f2 * (z / 100) * stab * type1 * type2 * f3;
+                    };
+                    var minDamage = calcDamage(85, 1, 1);
+                    var maxDamage = calcDamage(100, 31, 252);
+                });
+            };
         });
     </script>
 }

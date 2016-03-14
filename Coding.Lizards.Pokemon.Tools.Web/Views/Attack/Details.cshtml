@@ -41,7 +41,7 @@
                     </div>
                 </div>
             </div>
-            <div class="three fields">
+            <div class="four fields">
                 <div class="field">
                     @Html.LabelFor(m => m.Item.Accuracy)
                     <div class="ui transparent input">
@@ -52,6 +52,12 @@
                     @Html.LabelFor(m => m.Item.Strength)
                     <div class="ui transparent input">
                         @Html.TextBoxFor(m => m.Item.Strength, new { @readonly = true })
+                    </div>
+                </div>
+                <div class="field">
+                    @Html.LabelFor(m => m.Item.DamageClass)
+                    <div class="ui transparent input">
+                        <input type="text" value="@Model.Item.DamageClass.DisplayName()" />
                     </div>
                 </div>
                 <div class="field">
