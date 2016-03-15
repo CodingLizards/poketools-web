@@ -52,6 +52,16 @@
                             </div>
                         </div>
                     </div>
+                    <div class="field">
+                        <label>@Texts.Home_Index_MinDamage</label>
+                        <div class="ui transparent input">
+                            <input readonly type="text" id="mindamage" />
+                        </div>
+                        <label>@Texts.Home_Index_MaxDamage</label>
+                        <div class="ui transparent input">
+                            <input readonly type="text" id="maxdamage" />
+                        </div>
+                    </div>
                 </div>
                 <div class="ui sixteen wide column">
                     <h4 class="ui dividing header">@Texts.Home_Index_UsedAttack</h4>
@@ -67,7 +77,9 @@
                             }
                         </div>
                     </div>
-                    <button class="ui primary button" type="button">@Texts.Home_Index_Fight</button>
+                </div>
+                <div class="ui right aligned sixteen wide column">
+                    <button data-action="calcattack" class="ui primary button" type="button">@Texts.Home_Index_Fight</button>
                 </div>
             </div>
         </div>
@@ -92,14 +104,16 @@
                 var attackingPokemon = undefined;
                 var defendingPokemon = undefined;
                 var usedAttack = undefined;
-                $.getJSON('/attack/' + $('#usedattack').dropdown('get value')).then(function (attack) {
+                $.getJSON('/home/attack?id=' + $('#usedattack').dropdown('get value')).then(function (attack) {
                     usedAttack = attack;
-                    return $.getJSON('/pokemon/' + $('#attackingpokemon').dropdown('get value'));
+                    return $.getJSON('/home/pokemon?id=' + $('#attackingpokemon').dropdown('get value'));
                 }).then(function (pokemon) {
                     attackingPokemon = pokemon;
-                    return $.getJSON('/pokemon/' + $('#defendingpokemon').dropdown('get value'));
+                    return $.getJSON('/home/pokemon?id=' + $('#defendingpokemon').dropdown('get value'));
                 }).then(function (pokemon) {
                     defendingPokemon = pokemon;
+                    return $.get('/home/effect?usedattack=' + usedAttack.Id + '&defendingpokemon=' + defendingPokemon.Id);
+                }).then(function (effect) {
                     var calcDamage = function (z, dv, fp) {
                         var baseStrength = usedAttack.Strength;
                         var basedamage = baseStrength;
@@ -124,20 +138,22 @@
                         var f2 = 1;
                         var f3 = 1;
 
-                        var stab = 0;
+                        var stab = 1;
                         if (usedAttack.Type == attackingPokemon.FirstType || usedAttack.Type == attackingPokemon.SecondType) {
                             stab = 1.5;
                         }
 
-                        var type1 = 0;
-                        var type2 = 0;
-
-                        return ((level * (2 / 5) + 2) * basedamage * (attack / (50 * defense)) * f1 + 2) * directhit * f2 * (z / 100) * stab * type1 * type2 * f3;
+                        return ((attackingLevel * (2 / 5) + 2) * basedamage * (attack / (50 * defense)) * f1 + 2) * directhit * f2 * (z / 100) * stab * effect * f3;
                     };
-                    var minDamage = calcDamage(85, 1, 1);
-                    var maxDamage = calcDamage(100, 31, 252);
+                    var minDamage = Math.floor(calcDamage(85, 1, 1));
+                    var maxDamage = Math.floor(calcDamage(100, 31, 252));
+                    $('#mindamage').val(minDamage);
+                    $('#maxdamage').val(maxDamage);
                 });
             };
+            $('[data-action=calcattack]').click(function () {
+                recalculateAttack();
+            });
         });
     </script>
 }

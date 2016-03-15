@@ -1,9 +1,11 @@
-﻿using Coding.Lizards.Pokemon.Tools.Web.Strings;
-using System.ComponentModel.DataAnnotations;
-using System.Threading;
+﻿namespace Coding.Lizards.Pokemon.Tools.Web.Models {
 
-namespace Coding.Lizards.Pokemon.Tools.Web.Models {
+    using Strings;
+    using System;
+    using System.ComponentModel.DataAnnotations;
+    using System.Threading;
 
+    [Serializable]
     public class PokemonModel : BaseModel<int> {
 
         [Display(ResourceType = typeof(Texts), Name = "Pokemon_List_GermanName")]
@@ -56,8 +58,10 @@ namespace Coding.Lizards.Pokemon.Tools.Web.Models {
             switch (uiculture.TwoLetterISOLanguageName.ToLower()) {
                 case "de":
                     return GermanName;
+
                 case "fr":
                     return FrenchName;
+
                 default:
                     return EnglishName;
             }

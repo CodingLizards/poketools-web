@@ -727,6 +727,24 @@ namespace Coding.Lizards.Pokemon.Tools.Web.Strings {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Maximaler Schaden ähnelt.
+        /// </summary>
+        public static string Home_Index_MaxDamage {
+            get {
+                return ResourceManager.GetString("Home_Index_MaxDamage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Minimaler Schaden ähnelt.
+        /// </summary>
+        public static string Home_Index_MinDamage {
+            get {
+                return ResourceManager.GetString("Home_Index_MinDamage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Mein Pokémon ähnelt.
         /// </summary>
         public static string Home_Index_MyPokemon {

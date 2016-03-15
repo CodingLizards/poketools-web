@@ -1,9 +1,11 @@
 ﻿namespace Coding.Lizards.Pokemon.Tools.Web.Models {
 
     using Coding.Lizards.Pokemon.Tools.Web.Strings;
+    using System;
     using System.ComponentModel.DataAnnotations;
     using System.Threading;
 
+    [Serializable]
     public class AttackModel : BaseModel<int> {
 
         [Display(ResourceType = typeof(Texts), Name = "Attack_List_GermanName")]

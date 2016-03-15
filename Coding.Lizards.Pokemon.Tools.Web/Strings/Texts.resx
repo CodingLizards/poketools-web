@@ -312,6 +312,12 @@
   <data name="Home_Index_Level" xml:space="preserve">
     <value>Level</value>
   </data>
+  <data name="Home_Index_MaxDamage" xml:space="preserve">
+    <value>Maximaler Schaden</value>
+  </data>
+  <data name="Home_Index_MinDamage" xml:space="preserve">
+    <value>Minimaler Schaden</value>
+  </data>
   <data name="Home_Index_MyPokemon" xml:space="preserve">
     <value>Mein Pokémon</value>
   </data>
